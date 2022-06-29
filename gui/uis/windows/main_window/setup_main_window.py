@@ -527,6 +527,14 @@ class SetupMainWindow:
             self.pass_text.setText("123456" + str(x))
             self.table_widget.setItem(row_number, 2, self.pass_text) # Add pass
             self.table_widget.setRowHeight(row_number, 22)
+            
+        #PAGE4
+        self.line_edit_name= QLineEdit("Super Carnes JH")
+        self.line_edit_dir= QLineEdit("Carrera 64 barrio sevilla")
+        self.button_aceptar= QPushButton("Aceptar datos")
+        
+        
+        
 
         # ADD WIDGETS
         self.ui.load_pages.row_1_layout.addWidget(self.circular_progress_1)
@@ -544,6 +552,10 @@ class SetupMainWindow:
         self.ui.load_pages.row_3_layout.addWidget(self.toggle_button)
         self.ui.load_pages.row_4_layout.addWidget(self.line_edit)
         self.ui.load_pages.row_5_layout.addWidget(self.table_widget)
+        self.ui.load_pages.Layout_Datos_empresa1.addWidget(self.line_edit_name)
+        self.ui.load_pages.Layout_Datos_empresa1.addWidget(self.line_edit_dir)
+        self.ui.load_pages.Layout_Datos_empresa2.addWidget(self.button_aceptar)
+        
 
         # RIGHT COLUMN
         # ///////////////////////////////////////////////////////////////

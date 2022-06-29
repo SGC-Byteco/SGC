@@ -76,6 +76,14 @@ class MainWindow(QMainWindow):
 
             # Load Page 3 
             MainFunctions.set_page(self, self.ui.load_pages.page_3)
+            
+        # LOAD PAGE DATOS EMPRESA
+        if btn.objectName()== "btn_new_file":
+            #Salect Menu
+            self.ui.left_menu.select_only_one(btn.objectName())
+            
+            # Load Page 4
+            MainFunctions.set_page(self,self.ui.load_pages.page_4)
 
         # BOTTOM INFORMATION
         if btn.objectName() == "btn_info":
