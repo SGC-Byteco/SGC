@@ -22,6 +22,9 @@ from . functions_main_window import *
 import sys
 import os
 
+#Conculta de la base de datos
+from dataBase.consulta import empresa, datos_usuarios
+
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
 from qt_core import *
@@ -502,40 +505,40 @@ class SetupMainWindow:
         # Columns / Header
         self.column_1 = QTableWidgetItem()
         self.column_1.setTextAlignment(Qt.AlignCenter)
-        self.column_1.setText("Usuario")
+        self.column_1.setText("Nombre")
 
         self.column_2 = QTableWidgetItem()
         self.column_2.setTextAlignment(Qt.AlignCenter)
-        self.column_2.setText("Nombre")
+        self.column_2.setText("Email")
 
         self.column_3 = QTableWidgetItem()
         self.column_3.setTextAlignment(Qt.AlignCenter)
-        self.column_3.setText("Contraseña")
+        self.column_3.setText("Rol")
 
         # Set column
         self.table_widget.setHorizontalHeaderItem(0, self.column_1)
         self.table_widget.setHorizontalHeaderItem(1, self.column_2)
         self.table_widget.setHorizontalHeaderItem(2, self.column_3)
 
-        for x in range(10):
+        for usuario in datos_usuarios:
             row_number = self.table_widget.rowCount()
             self.table_widget.insertRow(row_number) # Insert row
-            self.table_widget.setItem(row_number, 0, QTableWidgetItem(str("Diego"))) # Add name
-            self.table_widget.setItem(row_number, 1, QTableWidgetItem(str("vfx_on_fire_" + str(x)))) # Add nick
+            self.table_widget.setItem(row_number, 0, QTableWidgetItem(str(usuario.name))) # Add name
+            self.table_widget.setItem(row_number, 1, QTableWidgetItem(str(usuario.email))) # Add nick
             self.pass_text = QTableWidgetItem()
             self.pass_text.setTextAlignment(Qt.AlignCenter)
-            self.pass_text.setText("123456" + str(x))
+            self.pass_text.setText(usuario.role)
             self.table_widget.setItem(row_number, 2, self.pass_text) # Add pass
             self.table_widget.setRowHeight(row_number, 22)
             
         #PAGE4
-        self.line_edit_name= QLineEdit("Super Carnes JH")
-        self.line_edit_dir= QLineEdit("Carrera 64 barrio sevilla")
+        self.line_edit_name= QLineEdit(empresa.nombre)
+        self.line_edit_nit= QLineEdit(empresa.nit)
+        self.line_edit_dir= QLineEdit(empresa.direccion)
+        self.line_edit_tel= QLineEdit(empresa.telefono)
+        self.line_edit_rs= QLineEdit(empresa.razon_social)
         self.button_aceptar= QPushButton("Aceptar datos")
         
-        
-        
-
         # ADD WIDGETS
         self.ui.load_pages.row_1_layout.addWidget(self.circular_progress_1)
         self.ui.load_pages.row_1_layout.addWidget(self.circular_progress_2)
@@ -553,7 +556,10 @@ class SetupMainWindow:
         self.ui.load_pages.row_4_layout.addWidget(self.line_edit)
         self.ui.load_pages.row_5_layout.addWidget(self.table_widget)
         self.ui.load_pages.Layout_Datos_empresa1.addWidget(self.line_edit_name)
+        self.ui.load_pages.Layout_Datos_empresa1.addWidget(self.line_edit_nit)
         self.ui.load_pages.Layout_Datos_empresa1.addWidget(self.line_edit_dir)
+        self.ui.load_pages.Layout_Datos_empresa1.addWidget(self.line_edit_tel)
+        self.ui.load_pages.Layout_Datos_empresa1.addWidget(self.line_edit_rs)
         self.ui.load_pages.Layout_Datos_empresa2.addWidget(self.button_aceptar)
         
 
