@@ -23,7 +23,7 @@ import sys
 import os
 
 #Conculta de la base de datos
-from dataBase.consulta import empresa, datos_usuarios
+from base_de_datos.consulta import empresa, datos_usuarios
 
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
@@ -538,6 +538,10 @@ class SetupMainWindow:
         self.line_edit_tel= QLineEdit(empresa.telefono)
         self.line_edit_rs= QLineEdit(empresa.razon_social)
         self.button_aceptar= QPushButton("Aceptar datos")
+        
+        
+        #PAGE5
+        
         
         # ADD WIDGETS
         self.ui.load_pages.row_1_layout.addWidget(self.circular_progress_1)

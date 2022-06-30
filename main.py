@@ -83,7 +83,7 @@ class MainWindow(QMainWindow):
             self.ui.left_menu.select_only_one(btn.objectName())
             
             # Load Page 4
-            MainFunctions.set_page(self,self.ui.load_pages.page_4)
+            MainFunctions.set_page(self,self.ui.load_pages.page_5)
 
         # BOTTOM INFORMATION
         if btn.objectName() == "btn_info":

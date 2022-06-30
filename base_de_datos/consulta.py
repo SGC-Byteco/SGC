@@ -1,4 +1,4 @@
-from dataBase.db import conexion
+from base_de_datos.db import conexion
 
 
 try:
