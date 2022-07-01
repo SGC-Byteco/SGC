@@ -22,6 +22,9 @@ from . functions_main_window import *
 import sys
 import os
 
+# Paginas
+
+
 #Conculta de la base de datos
 from base_de_datos.consulta import empresa, datos_usuarios
 
@@ -542,6 +545,9 @@ class SetupMainWindow:
         
         #PAGE5
         
+        
+        #PAGE 5
+        #////////////////////////////////////////////////////////
         
         # ADD WIDGETS
         self.ui.load_pages.row_1_layout.addWidget(self.circular_progress_1)

@@ -13,22 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="main_pages_layout">
-   <property name="spacing">
-    <number>0</number>
-   </property>
-   <property name="leftMargin">
-    <number>5</number>
-   </property>
-   <property name="topMargin">
-    <number>5</number>
-   </property>
-   <property name="rightMargin">
-    <number>5</number>
-   </property>
-   <property name="bottomMargin">
-    <number>5</number>
-   </property>
+  <layout class="QVBoxLayout" name="verticalLayout_7">
    <item>
     <widget class="QStackedWidget" name="pages">
      <property name="currentIndex">
@@ -163,6 +148,9 @@
        </property>
        <item>
         <widget class="QScrollArea" name="scroll_area">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="styleSheet">
           <string notr="true">background: transparent;</string>
          </property>
@@ -183,8 +171,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>840</width>
-            <height>561</height>
+            <width>214</width>
+            <height>266</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -305,7 +293,7 @@ I will try to always record a new tutorial when adding a new Widget and updating
              <string>Datos de la empresa</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
            </widget>
           </item>
@@ -321,1001 +309,1110 @@ I will try to always record a new tutorial when adding a new Widget and updating
       </layout>
      </widget>
      <widget class="QWidget" name="page_5">
-      <widget class="QScrollArea" name="scrollArea">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>841</width>
-         <height>681</height>
-        </rect>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>5</number>
        </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>16777215</height>
-        </size>
+       <property name="leftMargin">
+        <number>5</number>
        </property>
-       <property name="widgetResizable">
-        <bool>true</bool>
+       <property name="topMargin">
+        <number>5</number>
        </property>
-       <widget class="QWidget" name="scrollAreaWidgetContents">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>839</width>
-          <height>679</height>
-         </rect>
-        </property>
-        <widget class="QLabel" name="Datos_de_la_empresa">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>831</width>
-           <height>21</height>
-          </rect>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 16pt &quot;Segoe UI&quot;;</string>
+          <string notr="true">background-color: transparent;</string>
          </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>832</width>
+            <height>553</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QLabel" name="Datos_de_la_empresa">
+             <property name="styleSheet">
+              <string notr="true">font: 16pt &quot;Segoe UI&quot;;
+</string>
+             </property>
+             <property name="text">
+              <string>Datos de la Empresa</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="layout_label">
+             <property name="spacing">
+              <number>60</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_nombre">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Nombre</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_razon_social">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Razon Social</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_direccion">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Direccion</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="datosEmpresa">
+             <property name="spacing">
+              <number>60</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLineEdit" name="datosEmpresa_nombre"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="datosEmpresa_razon_social"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="datosEmpresa_direccion"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="layout_label_2">
+             <property name="spacing">
+              <number>60</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_telefono">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Telefono</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_tipo_regimen">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Tipo Regimen</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_nit">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>NIT</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="datosEmpresa1">
+             <property name="spacing">
+              <number>60</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLineEdit" name="datosEmpresa_telefono"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="datosEmpresa_tipo_regimen"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="datosEmpresa_nit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="layout_label_3">
+             <property name="spacing">
+              <number>60</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_departamento">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Departamento</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_municipio">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Municipio</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="datosEmpresa3">
+             <property name="spacing">
+              <number>60</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QComboBox" name="datosEmpresa_departamento"/>
+             </item>
+             <item>
+              <widget class="QComboBox" name="datosEmpresa_municipio"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="layout_label_4" stretch="0,0,0,0,0">
+             <property name="spacing">
+              <number>60</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_tercero">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Tercero POS por defecto</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_sucursal">
+               <property name="maximumSize">
+                <size>
+                 <width>98</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Sucursal</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_lista_precios">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Lista de precios  por defecto</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_escaner">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Tipo Escaner</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelEmpresa_licencia">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Licencia</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="datosEmpresa4">
+             <property name="spacing">
+              <number>60</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QComboBox" name="datosEmpresa_tercero"/>
+             </item>
+             <item>
+              <widget class="QComboBox" name="datosEmpresa_sucursal"/>
+             </item>
+             <item>
+              <widget class="QComboBox" name="datosEmpresa_lista_precios"/>
+             </item>
+             <item>
+              <widget class="QComboBox" name="datosEmpresa_tipo_escaner"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="datosEmpresa_licencia">
+               <property name="maximumSize">
+                <size>
+                 <width>80</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="Datos_de_la_empresa_2">
+             <property name="styleSheet">
+              <string notr="true">font: 16pt &quot;Segoe UI&quot;;
+</string>
+             </property>
+             <property name="text">
+              <string>Configuracion de Impresoras y Basculas</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTabWidget" name="configuraciones_basculas_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;</string>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="tab">
+              <attribute name="title">
+               <string>Impresora POS</string>
+              </attribute>
+              <widget class="QWidget" name="verticalLayoutWidget_2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>10</y>
+                 <width>821</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="layout_configuracion_pos_2">
+                <item>
+                 <widget class="QLabel" name="config_label_pos_2">
+                  <property name="text">
+                   <string>Cantidad de caracteres</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="config_linea_pos_2">
+                  <property name="maximumSize">
+                   <size>
+                    <width>154</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="Basculas">
+              <property name="styleSheet">
+               <string notr="true">background-color:transparent;
+
+</string>
+              </property>
+              <attribute name="title">
+               <string>Basculas</string>
+              </attribute>
+              <widget class="QTabWidget" name="configuraciones_basculas">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>10</y>
+                 <width>821</width>
+                 <height>151</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: transparent;</string>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="bascula_Dibal_2">
+                <attribute name="title">
+                 <string>Bascula Dibal</string>
+                </attribute>
+                <widget class="QWidget" name="horizontalLayoutWidget_16">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>30</y>
+                   <width>531</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <layout class="QHBoxLayout" name="layout_configuracion_dibal_5">
+                  <item>
+                   <widget class="QLineEdit" name="configuracion_linea_dibal_3">
+                    <property name="maximumSize">
+                     <size>
+                      <width>500</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="configuracion_secciones_2"/>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="config_label_dibal_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>10</y>
+                   <width>121</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Ruta Archivo Bascula</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="config_label_dibal_5">
+                 <property name="geometry">
+                  <rect>
+                   <x>460</x>
+                   <y>10</y>
+                   <width>71</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Secciones</string>
+                 </property>
+                </widget>
+                <widget class="QWidget" name="horizontalLayoutWidget_17">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>80</y>
+                   <width>531</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <layout class="QHBoxLayout" name="layout_configuracion_dibal_6">
+                  <item>
+                   <widget class="QLineEdit" name="configuracion_linea_dibal_4">
+                    <property name="maximumSize">
+                     <size>
+                      <width>500</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="boton_configuracion_dibal_2">
+                    <property name="text">
+                     <string>Generar Archivo TXT</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="config_label_dibal_6">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>60</y>
+                   <width>251</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Ruta de archivo TX subir datos a bascula Dibal</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="bascula_epelsa_2">
+                <attribute name="title">
+                 <string>Bascula Epelsa</string>
+                </attribute>
+                <widget class="QWidget" name="horizontalLayoutWidget_18">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>30</y>
+                   <width>531</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <layout class="QHBoxLayout" name="layout_configuracion_epelsa_3">
+                  <item>
+                   <widget class="QLineEdit" name="configuracion_linea_epelsa_3">
+                    <property name="maximumSize">
+                     <size>
+                      <width>545</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="config_label_epelsa_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>10</y>
+                   <width>161</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Ruta Archivo tiquetes Epelsa</string>
+                 </property>
+                </widget>
+                <widget class="QWidget" name="horizontalLayoutWidget_19">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>80</y>
+                   <width>531</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <layout class="QHBoxLayout" name="layout_configuracion_dibal_7">
+                  <item>
+                   <widget class="QLineEdit" name="configuracion_linea_epelsa_4">
+                    <property name="maximumSize">
+                     <size>
+                      <width>500</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="boton_configuracion_epelsa_2">
+                    <property name="text">
+                     <string>Generar Archivo Precios</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="config_label_epelsa_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>60</y>
+                   <width>201</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Ruta Archivo precios bascula Epelsa</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="bascula_ishida_2">
+                <attribute name="title">
+                 <string>Bascula Ishida</string>
+                </attribute>
+                <widget class="QLabel" name="config_label_ishida_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>10</y>
+                   <width>161</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Ruta Archivo Bascula</string>
+                 </property>
+                </widget>
+                <widget class="QWidget" name="horizontalLayoutWidget_20">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>30</y>
+                   <width>531</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <layout class="QHBoxLayout" name="layout_configuracion_epelsa_4">
+                  <item>
+                   <widget class="QLineEdit" name="configuracion_linea_ishida_3">
+                    <property name="maximumSize">
+                     <size>
+                      <width>545</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="horizontalLayoutWidget_21">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>80</y>
+                   <width>531</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <layout class="QHBoxLayout" name="layout_configuracion_dibal_8">
+                  <item>
+                   <widget class="QLineEdit" name="configuracion_linea_ishida_4">
+                    <property name="maximumSize">
+                     <size>
+                      <width>500</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="boton_configuracion_ishida_2">
+                    <property name="text">
+                     <string>Generar Archivo Productos</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="config_label_ishida_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>60</y>
+                   <width>291</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Ruta archivo PRODUCTOS subir datos a bascula ishida</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="bascula_marques_2">
+                <attribute name="title">
+                 <string>Bascula Marques</string>
+                </attribute>
+                <widget class="QWidget" name="horizontalLayoutWidget_22">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>30</y>
+                   <width>531</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <layout class="QHBoxLayout" name="layout_configuracion_marques_3">
+                  <item>
+                   <widget class="QLineEdit" name="configuracion_linea_marques_2">
+                    <property name="maximumSize">
+                     <size>
+                      <width>545</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="config_label_marques_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>10</y>
+                   <width>241</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Direccion IP de la bascula Marques maestra</string>
+                 </property>
+                </widget>
+                <widget class="QWidget" name="horizontalLayoutWidget_23">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>70</y>
+                   <width>491</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <layout class="QHBoxLayout" name="layout_configuracion_marques_4">
+                  <item>
+                   <widget class="QPushButton" name="boton_configuracion_marques_4">
+                    <property name="text">
+                     <string>ELIMINAR FAMILIAS</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="boton_configuracion_marques_5">
+                    <property name="text">
+                     <string>ELIMINAR PRODUCTOS</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="boton_configuracion_marques_6">
+                    <property name="text">
+                     <string>ELIMINAR DATOS A BASCULA</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="facturacion_electronica">
+              <attribute name="title">
+               <string>Facturacion Electronica</string>
+              </attribute>
+              <widget class="QLabel" name="configuracion_label_factura_token">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>161</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Token Facturacion Electronica</string>
+               </property>
+              </widget>
+              <widget class="QWidget" name="horizontalLayoutWidget_13">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>20</y>
+                 <width>831</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <layout class="QHBoxLayout" name="layout_configuracion_factura">
+                <item>
+                 <widget class="QLineEdit" name="configuracion_linea_factura_token"/>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="configuracion_linea_factura_Dian"/>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QLabel" name="configuracion_label_factura_token_2">
+               <property name="geometry">
+                <rect>
+                 <x>420</x>
+                 <y>0</y>
+                 <width>161</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>id Test Dian FE</string>
+               </property>
+              </widget>
+              <widget class="QWidget" name="horizontalLayoutWidget_14">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>70</y>
+                 <width>831</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <layout class="QHBoxLayout" name="layout_configuracion_factura_2">
+                <item>
+                 <widget class="QComboBox" name="configuracion_linea_factura_impuesto_bolsa"/>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="configuracion_linea_factura_Impuesto_excluido"/>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="configuracion_linea_factura_email">
+                  <property name="maximumSize">
+                   <size>
+                    <width>411</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QLabel" name="configuracion_label_factura_token_3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>50</y>
+                 <width>161</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Producto impuesto Bolsa</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="configuracion_label_factura_token_5">
+               <property name="geometry">
+                <rect>
+                 <x>210</x>
+                 <y>50</y>
+                 <width>161</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Seleccione impuesto Excluido</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="configuracion_label_factura_token_4">
+               <property name="geometry">
+                <rect>
+                 <x>420</x>
+                 <y>50</y>
+                 <width>161</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Email Backup FE</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="layout_configuracion_factura_3">
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="configuracion_boton_factura_eliminar">
+               <property name="text">
+                <string>ELIMINAR DATOS HABIL FE</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="configuracion_boton_factura_limpiar">
+               <property name="text">
+                <string>LIMPIAR TIQUETES</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="configuracion_boton_factura_guardar">
+               <property name="text">
+                <string>GUARDAR EDICION</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_6">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>Datos de la Empresa</string>
+          <string>Aqui no hay nada</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Por aca tampoco</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QWidget" name="horizontalLayoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>60</y>
-           <width>841</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <layout class="QHBoxLayout" name="datosEmpresa">
-          <property name="spacing">
-           <number>60</number>
-          </property>
-          <property name="leftMargin">
-           <number>20</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>20</number>
-          </property>
-          <item>
-           <widget class="QLineEdit" name="datosEmpresa_nombre"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="datosEmpresa_razon_social"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="datosEmpresa_direccion"/>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="horizontalLayoutWidget_2">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>110</y>
-           <width>841</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <layout class="QHBoxLayout" name="datosEmpresa1">
-          <property name="spacing">
-           <number>60</number>
-          </property>
-          <property name="leftMargin">
-           <number>20</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>20</number>
-          </property>
-          <item>
-           <widget class="QLineEdit" name="datosEmpresa_telefono"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="datosEmpresa_tipo_regimen"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="datosEmpresa_nit"/>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="horizontalLayoutWidget_3">
-         <property name="geometry">
-          <rect>
-           <x>-10</x>
-           <y>160</y>
-           <width>841</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <layout class="QHBoxLayout" name="datosEmpresa3">
-          <property name="spacing">
-           <number>60</number>
-          </property>
-          <property name="leftMargin">
-           <number>20</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>20</number>
-          </property>
-          <item>
-           <widget class="QComboBox" name="datosEmpresa_departamento"/>
-          </item>
-          <item>
-           <widget class="QComboBox" name="datosEmpresa_municipio"/>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="horizontalLayoutWidget_4">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>220</y>
-           <width>841</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <layout class="QHBoxLayout" name="datosEmpresa4">
-          <property name="spacing">
-           <number>60</number>
-          </property>
-          <property name="leftMargin">
-           <number>20</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>20</number>
-          </property>
-          <item>
-           <widget class="QComboBox" name="datosEmpresa_tercero"/>
-          </item>
-          <item>
-           <widget class="QComboBox" name="datosEmpresa_sucursal"/>
-          </item>
-          <item>
-           <widget class="QComboBox" name="datosEmpresa_lista_precios"/>
-          </item>
-          <item>
-           <widget class="QComboBox" name="datosEmpresa_tipo_escaner"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="datosEmpresa_licencia">
-            <property name="maximumSize">
-             <size>
-              <width>80</width>
-              <height>16777215</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_nombre">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>40</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Nombre</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_razon_social">
-         <property name="geometry">
-          <rect>
-           <x>300</x>
-           <y>40</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Razon Social</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_direccion">
-         <property name="geometry">
-          <rect>
-           <x>590</x>
-           <y>40</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Direccion</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_telefono">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>90</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Telefono</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_tipo_regimen">
-         <property name="geometry">
-          <rect>
-           <x>310</x>
-           <y>90</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Tipo Regimen</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_nit">
-         <property name="geometry">
-          <rect>
-           <x>590</x>
-           <y>90</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>NIT</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_departamento">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>140</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Direccion</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_municipio">
-         <property name="geometry">
-          <rect>
-           <x>440</x>
-           <y>140</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Municipio</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_tercero">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>200</y>
-           <width>171</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Tercero POS por defecto</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_sucursal">
-         <property name="geometry">
-          <rect>
-           <x>200</x>
-           <y>200</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Sucursal</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_lista_precios">
-         <property name="geometry">
-          <rect>
-           <x>380</x>
-           <y>200</y>
-           <width>131</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Lista de precios defecto</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_escaner">
-         <property name="geometry">
-          <rect>
-           <x>560</x>
-           <y>200</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Tipo Escaner</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelEmpresa_licencia">
-         <property name="geometry">
-          <rect>
-           <x>740</x>
-           <y>200</y>
-           <width>101</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Licencia</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="Datos_de_la_empresa_2">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>270</y>
-           <width>831</width>
-           <height>31</height>
-          </rect>
-         </property>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_2">
          <property name="styleSheet">
-          <string notr="true">font: 16pt &quot;Segoe UI&quot;;</string>
+          <string notr="true"/>
          </property>
-         <property name="text">
-          <string>Configuracion de Impresoras y Basculas</string>
+         <property name="widgetResizable">
+          <bool>true</bool>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QWidget" name="horizontalLayoutWidget_15">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>530</y>
-           <width>831</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <layout class="QHBoxLayout" name="layout_configuracion_factura_3">
-          <item>
-           <widget class="QPushButton" name="configuracion_boton_factura_eliminar">
-            <property name="text">
-             <string>ELIMINAR DATOS HABIL FE</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="configuracion_boton_factura_limpiar">
-            <property name="text">
-             <string>LIMPIAR TIQUETES</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="configuracion_boton_factura_guardar">
-            <property name="text">
-             <string>GUARDAR EDICION</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QTabWidget" name="configuraciones_basculas_2">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>310</y>
-           <width>841</width>
-           <height>181</height>
-          </rect>
-         </property>
-         <property name="currentIndex">
-          <number>1</number>
-         </property>
-         <widget class="QWidget" name="tab">
-          <attribute name="title">
-           <string>Impresora POS</string>
-          </attribute>
-          <widget class="QWidget" name="verticalLayoutWidget_2">
+         <widget class="QWidget" name="scrollAreaWidgetContents_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>822</width>
+            <height>499</height>
+           </rect>
+          </property>
+          <widget class="QWidget" name="verticalLayoutWidget">
            <property name="geometry">
             <rect>
-             <x>0</x>
-             <y>10</y>
-             <width>821</width>
-             <height>51</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="layout_configuracion_pos_2">
-            <item>
-             <widget class="QLabel" name="config_label_pos_2">
-              <property name="text">
-               <string>Cantidad de caracteres</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="config_linea_pos_2">
-              <property name="maximumSize">
-               <size>
-                <width>154</width>
-                <height>16777215</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="Basculas">
-          <attribute name="title">
-           <string>Basculas</string>
-          </attribute>
-          <widget class="QTabWidget" name="configuraciones_basculas">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>10</y>
-             <width>821</width>
-             <height>151</height>
-            </rect>
-           </property>
-           <property name="currentIndex">
-            <number>0</number>
-           </property>
-           <widget class="QWidget" name="bascula_Dibal_2">
-            <attribute name="title">
-             <string>Bascula Dibal</string>
-            </attribute>
-            <widget class="QWidget" name="horizontalLayoutWidget_16">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>30</y>
-               <width>531</width>
-               <height>31</height>
-              </rect>
-             </property>
-             <layout class="QHBoxLayout" name="layout_configuracion_dibal_5">
-              <item>
-               <widget class="QLineEdit" name="configuracion_linea_dibal_3">
-                <property name="maximumSize">
-                 <size>
-                  <width>500</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="configuracion_secciones_2"/>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QLabel" name="config_label_dibal_4">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>10</y>
-               <width>121</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Ruta Archivo Bascula</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="config_label_dibal_5">
-             <property name="geometry">
-              <rect>
-               <x>460</x>
-               <y>10</y>
-               <width>71</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Secciones</string>
-             </property>
-            </widget>
-            <widget class="QWidget" name="horizontalLayoutWidget_17">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>80</y>
-               <width>531</width>
-               <height>31</height>
-              </rect>
-             </property>
-             <layout class="QHBoxLayout" name="layout_configuracion_dibal_6">
-              <item>
-               <widget class="QLineEdit" name="configuracion_linea_dibal_4">
-                <property name="maximumSize">
-                 <size>
-                  <width>500</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="boton_configuracion_dibal_2">
-                <property name="text">
-                 <string>Generar Archivo TXT</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QLabel" name="config_label_dibal_6">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>60</y>
-               <width>251</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Ruta de archivo TX subir datos a bascula Dibal</string>
-             </property>
-            </widget>
-           </widget>
-           <widget class="QWidget" name="bascula_epelsa_2">
-            <attribute name="title">
-             <string>Bascula Epelsa</string>
-            </attribute>
-            <widget class="QWidget" name="horizontalLayoutWidget_18">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>30</y>
-               <width>531</width>
-               <height>31</height>
-              </rect>
-             </property>
-             <layout class="QHBoxLayout" name="layout_configuracion_epelsa_3">
-              <item>
-               <widget class="QLineEdit" name="configuracion_linea_epelsa_3">
-                <property name="maximumSize">
-                 <size>
-                  <width>545</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QLabel" name="config_label_epelsa_3">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>10</y>
-               <width>161</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Ruta Archivo tiquetes Epelsa</string>
-             </property>
-            </widget>
-            <widget class="QWidget" name="horizontalLayoutWidget_19">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>80</y>
-               <width>531</width>
-               <height>31</height>
-              </rect>
-             </property>
-             <layout class="QHBoxLayout" name="layout_configuracion_dibal_7">
-              <item>
-               <widget class="QLineEdit" name="configuracion_linea_epelsa_4">
-                <property name="maximumSize">
-                 <size>
-                  <width>500</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="boton_configuracion_epelsa_2">
-                <property name="text">
-                 <string>Generar Archivo Precios</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QLabel" name="config_label_epelsa_4">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>60</y>
-               <width>201</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Ruta Archivo precios bascula Epelsa</string>
-             </property>
-            </widget>
-           </widget>
-           <widget class="QWidget" name="bascula_ishida_2">
-            <attribute name="title">
-             <string>Bascula Ishida</string>
-            </attribute>
-            <widget class="QLabel" name="config_label_ishida_3">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>10</y>
-               <width>161</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Ruta Archivo Bascula</string>
-             </property>
-            </widget>
-            <widget class="QWidget" name="horizontalLayoutWidget_20">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>30</y>
-               <width>531</width>
-               <height>31</height>
-              </rect>
-             </property>
-             <layout class="QHBoxLayout" name="layout_configuracion_epelsa_4">
-              <item>
-               <widget class="QLineEdit" name="configuracion_linea_ishida_3">
-                <property name="maximumSize">
-                 <size>
-                  <width>545</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="horizontalLayoutWidget_21">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>80</y>
-               <width>531</width>
-               <height>31</height>
-              </rect>
-             </property>
-             <layout class="QHBoxLayout" name="layout_configuracion_dibal_8">
-              <item>
-               <widget class="QLineEdit" name="configuracion_linea_ishida_4">
-                <property name="maximumSize">
-                 <size>
-                  <width>500</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="boton_configuracion_ishida_2">
-                <property name="text">
-                 <string>Generar Archivo Productos</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QLabel" name="config_label_ishida_4">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>60</y>
-               <width>291</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Ruta archivo PRODUCTOS subir datos a bascula ishida</string>
-             </property>
-            </widget>
-           </widget>
-           <widget class="QWidget" name="bascula_marques_2">
-            <attribute name="title">
-             <string>Bascula Marques</string>
-            </attribute>
-            <widget class="QWidget" name="horizontalLayoutWidget_22">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>30</y>
-               <width>531</width>
-               <height>31</height>
-              </rect>
-             </property>
-             <layout class="QHBoxLayout" name="layout_configuracion_marques_3">
-              <item>
-               <widget class="QLineEdit" name="configuracion_linea_marques_2">
-                <property name="maximumSize">
-                 <size>
-                  <width>545</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QLabel" name="config_label_marques_2">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>10</y>
-               <width>241</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Direccion IP de la bascula Marques maestra</string>
-             </property>
-            </widget>
-            <widget class="QWidget" name="horizontalLayoutWidget_23">
-             <property name="geometry">
-              <rect>
-               <x>30</x>
-               <y>70</y>
-               <width>491</width>
-               <height>41</height>
-              </rect>
-             </property>
-             <layout class="QHBoxLayout" name="layout_configuracion_marques_4">
-              <item>
-               <widget class="QPushButton" name="boton_configuracion_marques_4">
-                <property name="text">
-                 <string>ELIMINAR FAMILIAS</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="boton_configuracion_marques_5">
-                <property name="text">
-                 <string>ELIMINAR PRODUCTOS</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="boton_configuracion_marques_6">
-                <property name="text">
-                 <string>ELIMINAR DATOS A BASCULA</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </widget>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="facturacion_electronica">
-          <attribute name="title">
-           <string>Facturacion Electronica</string>
-          </attribute>
-          <widget class="QLabel" name="configuracion_label_factura_token">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>161</width>
-             <height>16</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Token Facturacion Electronica</string>
-           </property>
-          </widget>
-          <widget class="QWidget" name="horizontalLayoutWidget_13">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>20</y>
-             <width>831</width>
-             <height>31</height>
-            </rect>
-           </property>
-           <layout class="QHBoxLayout" name="layout_configuracion_factura">
-            <item>
-             <widget class="QLineEdit" name="configuracion_linea_factura_token"/>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="configuracion_linea_factura_Dian"/>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QLabel" name="configuracion_label_factura_token_2">
-           <property name="geometry">
-            <rect>
-             <x>420</x>
-             <y>0</y>
-             <width>161</width>
-             <height>16</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>id Test Dian FE</string>
-           </property>
-          </widget>
-          <widget class="QWidget" name="horizontalLayoutWidget_14">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>70</y>
-             <width>831</width>
-             <height>31</height>
-            </rect>
-           </property>
-           <layout class="QHBoxLayout" name="layout_configuracion_factura_2">
-            <item>
-             <widget class="QComboBox" name="configuracion_linea_factura_impuesto_bolsa"/>
-            </item>
-            <item>
-             <widget class="QComboBox" name="configuracion_linea_factura_Impuesto_excluido"/>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="configuracion_linea_factura_email">
-              <property name="maximumSize">
-               <size>
-                <width>411</width>
-                <height>16777215</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QLabel" name="configuracion_label_factura_token_3">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
+             <x>300</x>
              <y>50</y>
-             <width>161</width>
-             <height>16</height>
+             <width>160</width>
+             <height>80</height>
             </rect>
            </property>
-           <property name="text">
-            <string>Producto impuesto Bolsa</string>
-           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8"/>
           </widget>
-          <widget class="QLabel" name="configuracion_label_factura_token_5">
+          <widget class="QWidget" name="verticalLayoutWidget_3">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>50</y>
-             <width>161</width>
-             <height>16</height>
+             <x>310</x>
+             <y>200</y>
+             <width>160</width>
+             <height>80</height>
             </rect>
            </property>
-           <property name="text">
-            <string>Seleccione impuesto Excluido</string>
-           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_9"/>
           </widget>
-          <widget class="QLabel" name="configuracion_label_factura_token_4">
+          <widget class="QPushButton" name="pushButton">
            <property name="geometry">
             <rect>
-             <x>420</x>
-             <y>50</y>
-             <width>161</width>
-             <height>16</height>
+             <x>90</x>
+             <y>150</y>
+             <width>75</width>
+             <height>24</height>
             </rect>
            </property>
            <property name="text">
-            <string>Email Backup FE</string>
+            <string>PushButton</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>90</y>
+             <width>69</width>
+             <height>22</height>
+            </rect>
            </property>
           </widget>
          </widget>
         </widget>
-       </widget>
-      </widget>
+       </item>
+      </layout>
+      <zorder>scrollArea_2</zorder>
+      <zorder>label_2</zorder>
+      <zorder>label_3</zorder>
      </widget>
     </widget>
    </item>

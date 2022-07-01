@@ -12,7 +12,10 @@ try:
         #Datos Empleados
         cursor.execute("SELECT name, email, role FROM dbo.users;")
         datos_usuarios= cursor.fetchall()
-                
+        
+        cursor.execute("SELECT name FROM dbo.users;")
+        datos_usuariosa= cursor.fetchall()
+        
             
 except Exception as e:
     print("Ocurrio un error al consultar: ",e)

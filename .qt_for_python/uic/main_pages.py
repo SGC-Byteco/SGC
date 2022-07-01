@@ -25,10 +25,8 @@ class Ui_MainPages(object):
         if not MainPages.objectName():
             MainPages.setObjectName(u"MainPages")
         MainPages.resize(860, 581)
-        self.main_pages_layout = QVBoxLayout(MainPages)
-        self.main_pages_layout.setSpacing(0)
-        self.main_pages_layout.setObjectName(u"main_pages_layout")
-        self.main_pages_layout.setContentsMargins(5, 5, 5, 5)
+        self.verticalLayout_7 = QVBoxLayout(MainPages)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.pages = QStackedWidget(MainPages)
         self.pages.setObjectName(u"pages")
         self.page_1 = QWidget()
@@ -79,6 +77,7 @@ class Ui_MainPages(object):
         self.page_2_layout.setContentsMargins(5, 5, 5, 5)
         self.scroll_area = QScrollArea(self.page_2)
         self.scroll_area.setObjectName(u"scroll_area")
+        self.scroll_area.setEnabled(True)
         self.scroll_area.setStyleSheet(u"background: transparent;")
         self.scroll_area.setFrameShape(QFrame.NoFrame)
         self.scroll_area.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
@@ -86,7 +85,7 @@ class Ui_MainPages(object):
         self.scroll_area.setWidgetResizable(True)
         self.contents = QWidget()
         self.contents.setObjectName(u"contents")
-        self.contents.setGeometry(QRect(0, 0, 840, 561))
+        self.contents.setGeometry(QRect(0, 0, 214, 266))
         self.contents.setStyleSheet(u"background: transparent;")
         self.verticalLayout = QVBoxLayout(self.contents)
         self.verticalLayout.setSpacing(15)
@@ -166,7 +165,7 @@ class Ui_MainPages(object):
         self.Titulo_Datos_empresa = QLabel(self.verticalWidget)
         self.Titulo_Datos_empresa.setObjectName(u"Titulo_Datos_empresa")
         self.Titulo_Datos_empresa.setFont(font)
-        self.Titulo_Datos_empresa.setAlignment(Qt.AlignCenter)
+        self.Titulo_Datos_empresa.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.verticalLayout_2.addWidget(self.Titulo_Datos_empresa)
 
@@ -186,196 +185,263 @@ class Ui_MainPages(object):
         self.pages.addWidget(self.page_4)
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
+        self.page_5.setStyleSheet(u"")
+        self.verticalLayout_5 = QVBoxLayout(self.page_5)
+        self.verticalLayout_5.setSpacing(5)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.verticalLayout_5.setContentsMargins(5, 5, 5, 5)
         self.scrollArea = QScrollArea(self.page_5)
         self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setGeometry(QRect(0, 0, 841, 681))
         self.scrollArea.setMaximumSize(QSize(16777215, 16777215))
+        self.scrollArea.setStyleSheet(u"background-color: transparent;")
+        self.scrollArea.setFrameShape(QFrame.NoFrame)
+        self.scrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.scrollArea.setWidgetResizable(True)
-        self.scrollAreaWidgetContents = QWidget()
-        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 839, 679))
-        self.Datos_de_la_empresa = QLabel(self.scrollAreaWidgetContents)
+        self.scrollAreaContents = QWidget()
+        self.scrollAreaContents.setObjectName(u"scrollAreaContents")
+        self.scrollAreaContents.setGeometry(QRect(0, 0, 832, 553))
+        self.scrollAreaContents.setStyleSheet(u"")
+        self.verticalLayout_6 = QVBoxLayout(self.scrollAreaContents)
+        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.Datos_de_la_empresa = QLabel(self.scrollAreaContents)
         self.Datos_de_la_empresa.setObjectName(u"Datos_de_la_empresa")
-        self.Datos_de_la_empresa.setGeometry(QRect(0, 0, 831, 21))
-        self.Datos_de_la_empresa.setStyleSheet(u"font: 16pt \"Segoe UI\";")
+        self.Datos_de_la_empresa.setStyleSheet(u"font: 16pt \"Segoe UI\";\n"
+"")
         self.Datos_de_la_empresa.setAlignment(Qt.AlignCenter)
-        self.horizontalLayoutWidget = QWidget(self.scrollAreaWidgetContents)
-        self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
-        self.horizontalLayoutWidget.setGeometry(QRect(0, 60, 841, 31))
-        self.datosEmpresa = QHBoxLayout(self.horizontalLayoutWidget)
+
+        self.verticalLayout_6.addWidget(self.Datos_de_la_empresa)
+
+        self.layout_label = QHBoxLayout()
+        self.layout_label.setSpacing(60)
+        self.layout_label.setObjectName(u"layout_label")
+        self.layout_label.setContentsMargins(20, -1, 20, -1)
+        self.labelEmpresa_nombre = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_nombre.setObjectName(u"labelEmpresa_nombre")
+        font1 = QFont()
+        font1.setPointSize(9)
+        self.labelEmpresa_nombre.setFont(font1)
+        self.labelEmpresa_nombre.setStyleSheet(u"")
+
+        self.layout_label.addWidget(self.labelEmpresa_nombre)
+
+        self.labelEmpresa_razon_social = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_razon_social.setObjectName(u"labelEmpresa_razon_social")
+        self.labelEmpresa_razon_social.setFont(font1)
+        self.labelEmpresa_razon_social.setStyleSheet(u"")
+
+        self.layout_label.addWidget(self.labelEmpresa_razon_social)
+
+        self.labelEmpresa_direccion = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_direccion.setObjectName(u"labelEmpresa_direccion")
+        self.labelEmpresa_direccion.setFont(font1)
+        self.labelEmpresa_direccion.setStyleSheet(u"")
+
+        self.layout_label.addWidget(self.labelEmpresa_direccion)
+
+
+        self.verticalLayout_6.addLayout(self.layout_label)
+
+        self.datosEmpresa = QHBoxLayout()
         self.datosEmpresa.setSpacing(60)
         self.datosEmpresa.setObjectName(u"datosEmpresa")
-        self.datosEmpresa.setContentsMargins(20, 0, 20, 0)
-        self.datosEmpresa_nombre = QLineEdit(self.horizontalLayoutWidget)
+        self.datosEmpresa.setContentsMargins(20, 0, 20, -1)
+        self.datosEmpresa_nombre = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_nombre.setObjectName(u"datosEmpresa_nombre")
 
         self.datosEmpresa.addWidget(self.datosEmpresa_nombre)
 
-        self.datosEmpresa_razon_social = QLineEdit(self.horizontalLayoutWidget)
+        self.datosEmpresa_razon_social = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_razon_social.setObjectName(u"datosEmpresa_razon_social")
 
         self.datosEmpresa.addWidget(self.datosEmpresa_razon_social)
 
-        self.datosEmpresa_direccion = QLineEdit(self.horizontalLayoutWidget)
+        self.datosEmpresa_direccion = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_direccion.setObjectName(u"datosEmpresa_direccion")
 
         self.datosEmpresa.addWidget(self.datosEmpresa_direccion)
 
-        self.horizontalLayoutWidget_2 = QWidget(self.scrollAreaWidgetContents)
-        self.horizontalLayoutWidget_2.setObjectName(u"horizontalLayoutWidget_2")
-        self.horizontalLayoutWidget_2.setGeometry(QRect(0, 110, 841, 31))
-        self.datosEmpresa1 = QHBoxLayout(self.horizontalLayoutWidget_2)
+
+        self.verticalLayout_6.addLayout(self.datosEmpresa)
+
+        self.layout_label_2 = QHBoxLayout()
+        self.layout_label_2.setSpacing(60)
+        self.layout_label_2.setObjectName(u"layout_label_2")
+        self.layout_label_2.setContentsMargins(20, -1, 20, -1)
+        self.labelEmpresa_telefono = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_telefono.setObjectName(u"labelEmpresa_telefono")
+        self.labelEmpresa_telefono.setFont(font1)
+        self.labelEmpresa_telefono.setStyleSheet(u"")
+
+        self.layout_label_2.addWidget(self.labelEmpresa_telefono)
+
+        self.labelEmpresa_tipo_regimen = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_tipo_regimen.setObjectName(u"labelEmpresa_tipo_regimen")
+        self.labelEmpresa_tipo_regimen.setFont(font1)
+        self.labelEmpresa_tipo_regimen.setStyleSheet(u"")
+
+        self.layout_label_2.addWidget(self.labelEmpresa_tipo_regimen)
+
+        self.labelEmpresa_nit = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_nit.setObjectName(u"labelEmpresa_nit")
+        self.labelEmpresa_nit.setFont(font1)
+        self.labelEmpresa_nit.setStyleSheet(u"")
+
+        self.layout_label_2.addWidget(self.labelEmpresa_nit)
+
+
+        self.verticalLayout_6.addLayout(self.layout_label_2)
+
+        self.datosEmpresa1 = QHBoxLayout()
         self.datosEmpresa1.setSpacing(60)
         self.datosEmpresa1.setObjectName(u"datosEmpresa1")
-        self.datosEmpresa1.setContentsMargins(20, 0, 20, 0)
-        self.datosEmpresa_telefono = QLineEdit(self.horizontalLayoutWidget_2)
+        self.datosEmpresa1.setContentsMargins(20, 0, 20, -1)
+        self.datosEmpresa_telefono = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_telefono.setObjectName(u"datosEmpresa_telefono")
 
         self.datosEmpresa1.addWidget(self.datosEmpresa_telefono)
 
-        self.datosEmpresa_tipo_regimen = QLineEdit(self.horizontalLayoutWidget_2)
+        self.datosEmpresa_tipo_regimen = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_tipo_regimen.setObjectName(u"datosEmpresa_tipo_regimen")
 
         self.datosEmpresa1.addWidget(self.datosEmpresa_tipo_regimen)
 
-        self.datosEmpresa_nit = QLineEdit(self.horizontalLayoutWidget_2)
+        self.datosEmpresa_nit = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_nit.setObjectName(u"datosEmpresa_nit")
 
         self.datosEmpresa1.addWidget(self.datosEmpresa_nit)
 
-        self.horizontalLayoutWidget_3 = QWidget(self.scrollAreaWidgetContents)
-        self.horizontalLayoutWidget_3.setObjectName(u"horizontalLayoutWidget_3")
-        self.horizontalLayoutWidget_3.setGeometry(QRect(-10, 160, 841, 31))
-        self.datosEmpresa3 = QHBoxLayout(self.horizontalLayoutWidget_3)
+
+        self.verticalLayout_6.addLayout(self.datosEmpresa1)
+
+        self.layout_label_3 = QHBoxLayout()
+        self.layout_label_3.setSpacing(60)
+        self.layout_label_3.setObjectName(u"layout_label_3")
+        self.layout_label_3.setContentsMargins(20, -1, 20, -1)
+        self.labelEmpresa_departamento = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_departamento.setObjectName(u"labelEmpresa_departamento")
+        self.labelEmpresa_departamento.setFont(font1)
+        self.labelEmpresa_departamento.setStyleSheet(u"")
+
+        self.layout_label_3.addWidget(self.labelEmpresa_departamento)
+
+        self.labelEmpresa_municipio = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_municipio.setObjectName(u"labelEmpresa_municipio")
+        self.labelEmpresa_municipio.setFont(font1)
+        self.labelEmpresa_municipio.setStyleSheet(u"")
+
+        self.layout_label_3.addWidget(self.labelEmpresa_municipio)
+
+
+        self.verticalLayout_6.addLayout(self.layout_label_3)
+
+        self.datosEmpresa3 = QHBoxLayout()
         self.datosEmpresa3.setSpacing(60)
         self.datosEmpresa3.setObjectName(u"datosEmpresa3")
-        self.datosEmpresa3.setContentsMargins(20, 0, 20, 0)
-        self.datosEmpresa_departamento = QComboBox(self.horizontalLayoutWidget_3)
+        self.datosEmpresa3.setContentsMargins(20, 0, 20, -1)
+        self.datosEmpresa_departamento = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_departamento.setObjectName(u"datosEmpresa_departamento")
 
         self.datosEmpresa3.addWidget(self.datosEmpresa_departamento)
 
-        self.datosEmpresa_municipio = QComboBox(self.horizontalLayoutWidget_3)
+        self.datosEmpresa_municipio = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_municipio.setObjectName(u"datosEmpresa_municipio")
 
         self.datosEmpresa3.addWidget(self.datosEmpresa_municipio)
 
-        self.horizontalLayoutWidget_4 = QWidget(self.scrollAreaWidgetContents)
-        self.horizontalLayoutWidget_4.setObjectName(u"horizontalLayoutWidget_4")
-        self.horizontalLayoutWidget_4.setGeometry(QRect(0, 220, 841, 31))
-        self.datosEmpresa4 = QHBoxLayout(self.horizontalLayoutWidget_4)
+
+        self.verticalLayout_6.addLayout(self.datosEmpresa3)
+
+        self.layout_label_4 = QHBoxLayout()
+        self.layout_label_4.setSpacing(60)
+        self.layout_label_4.setObjectName(u"layout_label_4")
+        self.layout_label_4.setContentsMargins(20, -1, 20, -1)
+        self.labelEmpresa_tercero = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_tercero.setObjectName(u"labelEmpresa_tercero")
+        self.labelEmpresa_tercero.setFont(font1)
+        self.labelEmpresa_tercero.setStyleSheet(u"")
+
+        self.layout_label_4.addWidget(self.labelEmpresa_tercero)
+
+        self.labelEmpresa_sucursal = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_sucursal.setObjectName(u"labelEmpresa_sucursal")
+        self.labelEmpresa_sucursal.setMaximumSize(QSize(98, 16777215))
+        self.labelEmpresa_sucursal.setFont(font1)
+        self.labelEmpresa_sucursal.setStyleSheet(u"")
+        self.labelEmpresa_sucursal.setAlignment(Qt.AlignCenter)
+
+        self.layout_label_4.addWidget(self.labelEmpresa_sucursal)
+
+        self.labelEmpresa_lista_precios = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_lista_precios.setObjectName(u"labelEmpresa_lista_precios")
+        self.labelEmpresa_lista_precios.setFont(font1)
+        self.labelEmpresa_lista_precios.setStyleSheet(u"")
+
+        self.layout_label_4.addWidget(self.labelEmpresa_lista_precios)
+
+        self.labelEmpresa_escaner = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_escaner.setObjectName(u"labelEmpresa_escaner")
+        self.labelEmpresa_escaner.setFont(font1)
+        self.labelEmpresa_escaner.setStyleSheet(u"")
+        self.labelEmpresa_escaner.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.layout_label_4.addWidget(self.labelEmpresa_escaner)
+
+        self.labelEmpresa_licencia = QLabel(self.scrollAreaContents)
+        self.labelEmpresa_licencia.setObjectName(u"labelEmpresa_licencia")
+        self.labelEmpresa_licencia.setFont(font1)
+        self.labelEmpresa_licencia.setStyleSheet(u"")
+        self.labelEmpresa_licencia.setAlignment(Qt.AlignCenter)
+
+        self.layout_label_4.addWidget(self.labelEmpresa_licencia)
+
+
+        self.verticalLayout_6.addLayout(self.layout_label_4)
+
+        self.datosEmpresa4 = QHBoxLayout()
         self.datosEmpresa4.setSpacing(60)
         self.datosEmpresa4.setObjectName(u"datosEmpresa4")
-        self.datosEmpresa4.setContentsMargins(20, 0, 20, 0)
-        self.datosEmpresa_tercero = QComboBox(self.horizontalLayoutWidget_4)
+        self.datosEmpresa4.setContentsMargins(20, 0, 20, -1)
+        self.datosEmpresa_tercero = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_tercero.setObjectName(u"datosEmpresa_tercero")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_tercero)
 
-        self.datosEmpresa_sucursal = QComboBox(self.horizontalLayoutWidget_4)
+        self.datosEmpresa_sucursal = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_sucursal.setObjectName(u"datosEmpresa_sucursal")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_sucursal)
 
-        self.datosEmpresa_lista_precios = QComboBox(self.horizontalLayoutWidget_4)
+        self.datosEmpresa_lista_precios = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_lista_precios.setObjectName(u"datosEmpresa_lista_precios")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_lista_precios)
 
-        self.datosEmpresa_tipo_escaner = QComboBox(self.horizontalLayoutWidget_4)
+        self.datosEmpresa_tipo_escaner = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_tipo_escaner.setObjectName(u"datosEmpresa_tipo_escaner")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_tipo_escaner)
 
-        self.datosEmpresa_licencia = QLineEdit(self.horizontalLayoutWidget_4)
+        self.datosEmpresa_licencia = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_licencia.setObjectName(u"datosEmpresa_licencia")
         self.datosEmpresa_licencia.setMaximumSize(QSize(80, 16777215))
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_licencia)
 
-        self.labelEmpresa_nombre = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_nombre.setObjectName(u"labelEmpresa_nombre")
-        self.labelEmpresa_nombre.setGeometry(QRect(20, 40, 101, 16))
-        font1 = QFont()
-        font1.setPointSize(9)
-        self.labelEmpresa_nombre.setFont(font1)
-        self.labelEmpresa_razon_social = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_razon_social.setObjectName(u"labelEmpresa_razon_social")
-        self.labelEmpresa_razon_social.setGeometry(QRect(300, 40, 101, 16))
-        self.labelEmpresa_razon_social.setFont(font1)
-        self.labelEmpresa_direccion = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_direccion.setObjectName(u"labelEmpresa_direccion")
-        self.labelEmpresa_direccion.setGeometry(QRect(590, 40, 101, 16))
-        self.labelEmpresa_direccion.setFont(font1)
-        self.labelEmpresa_telefono = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_telefono.setObjectName(u"labelEmpresa_telefono")
-        self.labelEmpresa_telefono.setGeometry(QRect(20, 90, 101, 16))
-        self.labelEmpresa_telefono.setFont(font1)
-        self.labelEmpresa_tipo_regimen = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_tipo_regimen.setObjectName(u"labelEmpresa_tipo_regimen")
-        self.labelEmpresa_tipo_regimen.setGeometry(QRect(310, 90, 101, 16))
-        self.labelEmpresa_tipo_regimen.setFont(font1)
-        self.labelEmpresa_nit = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_nit.setObjectName(u"labelEmpresa_nit")
-        self.labelEmpresa_nit.setGeometry(QRect(590, 90, 101, 16))
-        self.labelEmpresa_nit.setFont(font1)
-        self.labelEmpresa_departamento = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_departamento.setObjectName(u"labelEmpresa_departamento")
-        self.labelEmpresa_departamento.setGeometry(QRect(10, 140, 101, 16))
-        self.labelEmpresa_departamento.setFont(font1)
-        self.labelEmpresa_municipio = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_municipio.setObjectName(u"labelEmpresa_municipio")
-        self.labelEmpresa_municipio.setGeometry(QRect(440, 140, 101, 16))
-        self.labelEmpresa_municipio.setFont(font1)
-        self.labelEmpresa_tercero = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_tercero.setObjectName(u"labelEmpresa_tercero")
-        self.labelEmpresa_tercero.setGeometry(QRect(20, 200, 171, 16))
-        self.labelEmpresa_tercero.setFont(font1)
-        self.labelEmpresa_sucursal = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_sucursal.setObjectName(u"labelEmpresa_sucursal")
-        self.labelEmpresa_sucursal.setGeometry(QRect(200, 200, 101, 16))
-        self.labelEmpresa_sucursal.setFont(font1)
-        self.labelEmpresa_lista_precios = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_lista_precios.setObjectName(u"labelEmpresa_lista_precios")
-        self.labelEmpresa_lista_precios.setGeometry(QRect(380, 200, 131, 16))
-        self.labelEmpresa_lista_precios.setFont(font1)
-        self.labelEmpresa_escaner = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_escaner.setObjectName(u"labelEmpresa_escaner")
-        self.labelEmpresa_escaner.setGeometry(QRect(560, 200, 101, 16))
-        self.labelEmpresa_escaner.setFont(font1)
-        self.labelEmpresa_licencia = QLabel(self.scrollAreaWidgetContents)
-        self.labelEmpresa_licencia.setObjectName(u"labelEmpresa_licencia")
-        self.labelEmpresa_licencia.setGeometry(QRect(740, 200, 101, 16))
-        self.labelEmpresa_licencia.setFont(font1)
-        self.Datos_de_la_empresa_2 = QLabel(self.scrollAreaWidgetContents)
+
+        self.verticalLayout_6.addLayout(self.datosEmpresa4)
+
+        self.Datos_de_la_empresa_2 = QLabel(self.scrollAreaContents)
         self.Datos_de_la_empresa_2.setObjectName(u"Datos_de_la_empresa_2")
-        self.Datos_de_la_empresa_2.setGeometry(QRect(0, 270, 831, 31))
-        self.Datos_de_la_empresa_2.setStyleSheet(u"font: 16pt \"Segoe UI\";")
+        self.Datos_de_la_empresa_2.setStyleSheet(u"font: 16pt \"Segoe UI\";\n"
+"")
         self.Datos_de_la_empresa_2.setAlignment(Qt.AlignCenter)
-        self.horizontalLayoutWidget_15 = QWidget(self.scrollAreaWidgetContents)
-        self.horizontalLayoutWidget_15.setObjectName(u"horizontalLayoutWidget_15")
-        self.horizontalLayoutWidget_15.setGeometry(QRect(0, 530, 831, 31))
-        self.layout_configuracion_factura_3 = QHBoxLayout(self.horizontalLayoutWidget_15)
-        self.layout_configuracion_factura_3.setObjectName(u"layout_configuracion_factura_3")
-        self.layout_configuracion_factura_3.setContentsMargins(0, 0, 0, 0)
-        self.configuracion_boton_factura_eliminar = QPushButton(self.horizontalLayoutWidget_15)
-        self.configuracion_boton_factura_eliminar.setObjectName(u"configuracion_boton_factura_eliminar")
 
-        self.layout_configuracion_factura_3.addWidget(self.configuracion_boton_factura_eliminar)
+        self.verticalLayout_6.addWidget(self.Datos_de_la_empresa_2)
 
-        self.configuracion_boton_factura_limpiar = QPushButton(self.horizontalLayoutWidget_15)
-        self.configuracion_boton_factura_limpiar.setObjectName(u"configuracion_boton_factura_limpiar")
-
-        self.layout_configuracion_factura_3.addWidget(self.configuracion_boton_factura_limpiar)
-
-        self.configuracion_boton_factura_guardar = QPushButton(self.horizontalLayoutWidget_15)
-        self.configuracion_boton_factura_guardar.setObjectName(u"configuracion_boton_factura_guardar")
-
-        self.layout_configuracion_factura_3.addWidget(self.configuracion_boton_factura_guardar)
-
-        self.configuraciones_basculas_2 = QTabWidget(self.scrollAreaWidgetContents)
+        self.configuraciones_basculas_2 = QTabWidget(self.scrollAreaContents)
         self.configuraciones_basculas_2.setObjectName(u"configuraciones_basculas_2")
-        self.configuraciones_basculas_2.setGeometry(QRect(0, 310, 841, 181))
+        self.configuraciones_basculas_2.setStyleSheet(u"background-color: transparent;")
         self.tab = QWidget()
         self.tab.setObjectName(u"tab")
         self.verticalLayoutWidget_2 = QWidget(self.tab)
@@ -399,9 +465,13 @@ class Ui_MainPages(object):
         self.configuraciones_basculas_2.addTab(self.tab, "")
         self.Basculas = QWidget()
         self.Basculas.setObjectName(u"Basculas")
+        self.Basculas.setStyleSheet(u"background-color:transparent;\n"
+"\n"
+"")
         self.configuraciones_basculas = QTabWidget(self.Basculas)
         self.configuraciones_basculas.setObjectName(u"configuraciones_basculas")
         self.configuraciones_basculas.setGeometry(QRect(0, 10, 821, 151))
+        self.configuraciones_basculas.setStyleSheet(u"background-color: transparent;")
         self.bascula_Dibal_2 = QWidget()
         self.bascula_Dibal_2.setObjectName(u"bascula_Dibal_2")
         self.horizontalLayoutWidget_16 = QWidget(self.bascula_Dibal_2)
@@ -620,10 +690,85 @@ class Ui_MainPages(object):
         self.configuracion_label_factura_token_4.setObjectName(u"configuracion_label_factura_token_4")
         self.configuracion_label_factura_token_4.setGeometry(QRect(420, 50, 161, 16))
         self.configuraciones_basculas_2.addTab(self.facturacion_electronica, "")
-        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-        self.pages.addWidget(self.page_5)
 
-        self.main_pages_layout.addWidget(self.pages)
+        self.verticalLayout_6.addWidget(self.configuraciones_basculas_2)
+
+        self.layout_configuracion_factura_3 = QHBoxLayout()
+        self.layout_configuracion_factura_3.setObjectName(u"layout_configuracion_factura_3")
+        self.layout_configuracion_factura_3.setContentsMargins(20, -1, 20, -1)
+        self.configuracion_boton_factura_eliminar = QPushButton(self.scrollAreaContents)
+        self.configuracion_boton_factura_eliminar.setObjectName(u"configuracion_boton_factura_eliminar")
+
+        self.layout_configuracion_factura_3.addWidget(self.configuracion_boton_factura_eliminar)
+
+        self.configuracion_boton_factura_limpiar = QPushButton(self.scrollAreaContents)
+        self.configuracion_boton_factura_limpiar.setObjectName(u"configuracion_boton_factura_limpiar")
+
+        self.layout_configuracion_factura_3.addWidget(self.configuracion_boton_factura_limpiar)
+
+        self.configuracion_boton_factura_guardar = QPushButton(self.scrollAreaContents)
+        self.configuracion_boton_factura_guardar.setObjectName(u"configuracion_boton_factura_guardar")
+
+        self.layout_configuracion_factura_3.addWidget(self.configuracion_boton_factura_guardar)
+
+
+        self.verticalLayout_6.addLayout(self.layout_configuracion_factura_3)
+
+        self.scrollArea.setWidget(self.scrollAreaContents)
+
+        self.verticalLayout_5.addWidget(self.scrollArea)
+
+        self.pages.addWidget(self.page_5)
+        self.page_6 = QWidget()
+        self.page_6.setObjectName(u"page_6")
+        self.verticalLayout_4 = QVBoxLayout(self.page_6)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.label_2 = QLabel(self.page_6)
+        self.label_2.setObjectName(u"label_2")
+
+        self.verticalLayout_4.addWidget(self.label_2)
+
+        self.label_3 = QLabel(self.page_6)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.verticalLayout_4.addWidget(self.label_3)
+
+        self.scrollArea_2 = QScrollArea(self.page_6)
+        self.scrollArea_2.setObjectName(u"scrollArea_2")
+        self.scrollArea_2.setStyleSheet(u"")
+        self.scrollArea_2.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_3 = QWidget()
+        self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 822, 499))
+        self.verticalLayoutWidget = QWidget(self.scrollAreaWidgetContents_3)
+        self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
+        self.verticalLayoutWidget.setGeometry(QRect(300, 50, 160, 80))
+        self.verticalLayout_8 = QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
+        self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayoutWidget_3 = QWidget(self.scrollAreaWidgetContents_3)
+        self.verticalLayoutWidget_3.setObjectName(u"verticalLayoutWidget_3")
+        self.verticalLayoutWidget_3.setGeometry(QRect(310, 200, 160, 80))
+        self.verticalLayout_9 = QVBoxLayout(self.verticalLayoutWidget_3)
+        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
+        self.pushButton = QPushButton(self.scrollAreaWidgetContents_3)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(90, 150, 75, 24))
+        self.comboBox = QComboBox(self.scrollAreaWidgetContents_3)
+        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox.setGeometry(QRect(110, 90, 69, 22))
+        self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_3)
+
+        self.verticalLayout_4.addWidget(self.scrollArea_2)
+
+        self.pages.addWidget(self.page_6)
+        self.scrollArea_2.raise_()
+        self.label_2.raise_()
+        self.label_3.raise_()
+
+        self.verticalLayout_7.addWidget(self.pages)
 
 
         self.retranslateUi(MainPages)
@@ -651,17 +796,14 @@ class Ui_MainPages(object):
         self.labelEmpresa_telefono.setText(QCoreApplication.translate("MainPages", u"Telefono", None))
         self.labelEmpresa_tipo_regimen.setText(QCoreApplication.translate("MainPages", u"Tipo Regimen", None))
         self.labelEmpresa_nit.setText(QCoreApplication.translate("MainPages", u"NIT", None))
-        self.labelEmpresa_departamento.setText(QCoreApplication.translate("MainPages", u"Direccion", None))
+        self.labelEmpresa_departamento.setText(QCoreApplication.translate("MainPages", u"Departamento", None))
         self.labelEmpresa_municipio.setText(QCoreApplication.translate("MainPages", u"Municipio", None))
         self.labelEmpresa_tercero.setText(QCoreApplication.translate("MainPages", u"Tercero POS por defecto", None))
         self.labelEmpresa_sucursal.setText(QCoreApplication.translate("MainPages", u"Sucursal", None))
-        self.labelEmpresa_lista_precios.setText(QCoreApplication.translate("MainPages", u"Lista de precios defecto", None))
+        self.labelEmpresa_lista_precios.setText(QCoreApplication.translate("MainPages", u"Lista de precios  por defecto", None))
         self.labelEmpresa_escaner.setText(QCoreApplication.translate("MainPages", u"Tipo Escaner", None))
         self.labelEmpresa_licencia.setText(QCoreApplication.translate("MainPages", u"Licencia", None))
         self.Datos_de_la_empresa_2.setText(QCoreApplication.translate("MainPages", u"Configuracion de Impresoras y Basculas", None))
-        self.configuracion_boton_factura_eliminar.setText(QCoreApplication.translate("MainPages", u"ELIMINAR DATOS HABIL FE", None))
-        self.configuracion_boton_factura_limpiar.setText(QCoreApplication.translate("MainPages", u"LIMPIAR TIQUETES", None))
-        self.configuracion_boton_factura_guardar.setText(QCoreApplication.translate("MainPages", u"GUARDAR EDICION", None))
         self.config_label_pos_2.setText(QCoreApplication.translate("MainPages", u"Cantidad de caracteres", None))
         self.configuraciones_basculas_2.setTabText(self.configuraciones_basculas_2.indexOf(self.tab), QCoreApplication.translate("MainPages", u"Impresora POS", None))
         self.config_label_dibal_4.setText(QCoreApplication.translate("MainPages", u"Ruta Archivo Bascula", None))
@@ -689,5 +831,11 @@ class Ui_MainPages(object):
         self.configuracion_label_factura_token_5.setText(QCoreApplication.translate("MainPages", u"Seleccione impuesto Excluido", None))
         self.configuracion_label_factura_token_4.setText(QCoreApplication.translate("MainPages", u"Email Backup FE", None))
         self.configuraciones_basculas_2.setTabText(self.configuraciones_basculas_2.indexOf(self.facturacion_electronica), QCoreApplication.translate("MainPages", u"Facturacion Electronica", None))
+        self.configuracion_boton_factura_eliminar.setText(QCoreApplication.translate("MainPages", u"ELIMINAR DATOS HABIL FE", None))
+        self.configuracion_boton_factura_limpiar.setText(QCoreApplication.translate("MainPages", u"LIMPIAR TIQUETES", None))
+        self.configuracion_boton_factura_guardar.setText(QCoreApplication.translate("MainPages", u"GUARDAR EDICION", None))
+        self.label_2.setText(QCoreApplication.translate("MainPages", u"Aqui no hay nada", None))
+        self.label_3.setText(QCoreApplication.translate("MainPages", u"Por aca tampoco", None))
+        self.pushButton.setText(QCoreApplication.translate("MainPages", u"PushButton", None))
     # retranslateUi
 
