@@ -468,9 +468,10 @@ class Ui_MainPages(object):
         self.Basculas.setStyleSheet(u"background-color:transparent;\n"
 "\n"
 "")
+        self.verticalLayout_10 = QVBoxLayout(self.Basculas)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
         self.configuraciones_basculas = QTabWidget(self.Basculas)
         self.configuraciones_basculas.setObjectName(u"configuraciones_basculas")
-        self.configuraciones_basculas.setGeometry(QRect(0, 10, 821, 151))
         self.configuraciones_basculas.setStyleSheet(u"background-color: transparent;")
         self.bascula_Dibal_2 = QWidget()
         self.bascula_Dibal_2.setObjectName(u"bascula_Dibal_2")
@@ -633,6 +634,9 @@ class Ui_MainPages(object):
         self.layout_configuracion_marques_4.addWidget(self.boton_configuracion_marques_6)
 
         self.configuraciones_basculas.addTab(self.bascula_marques_2, "")
+
+        self.verticalLayout_10.addWidget(self.configuraciones_basculas)
+
         self.configuraciones_basculas_2.addTab(self.Basculas, "")
         self.facturacion_electronica = QWidget()
         self.facturacion_electronica.setObjectName(u"facturacion_electronica")
@@ -774,7 +778,7 @@ class Ui_MainPages(object):
         self.retranslateUi(MainPages)
 
         self.pages.setCurrentIndex(4)
-        self.configuraciones_basculas_2.setCurrentIndex(1)
+        self.configuraciones_basculas_2.setCurrentIndex(0)
         self.configuraciones_basculas.setCurrentIndex(0)
 
 

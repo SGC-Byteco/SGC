@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_pageszHYLQz.ui'
+## Form generated from reading UI file 'main_pagesNhnegt.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -19,8 +19,6 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
     QLabel, QLineEdit, QPushButton, QScrollArea,
     QSizePolicy, QStackedWidget, QTabWidget, QVBoxLayout,
     QWidget)
-from base_de_datos.consulta import empresa, datos_usuarios, datos_usuariosa
-
 
 class Ui_MainPages(object):
     def setupUi(self, MainPages):
@@ -406,14 +404,7 @@ class Ui_MainPages(object):
         self.datosEmpresa4.setContentsMargins(20, 0, 20, -1)
         self.datosEmpresa_tercero = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_tercero.setObjectName(u"datosEmpresa_tercero")
-        # ////////////////////////////////////////////////////7
-        nombres=[]
-        
-        for usuarioa in datos_usuarios:
-            nombres.append(usuarioa.name)
-        
-        self.datosEmpresa_tercero.addItems(nombres)
-        # ///////////////////////////////////////////////
+
         self.datosEmpresa4.addWidget(self.datosEmpresa_tercero)
 
         self.datosEmpresa_sucursal = QComboBox(self.scrollAreaContents)
@@ -434,6 +425,10 @@ class Ui_MainPages(object):
         self.datosEmpresa_licencia = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_licencia.setObjectName(u"datosEmpresa_licencia")
         self.datosEmpresa_licencia.setMaximumSize(QSize(80, 16777215))
+
+        self.datosEmpresa4.addWidget(self.datosEmpresa_licencia)
+
+
         self.verticalLayout_6.addLayout(self.datosEmpresa4)
 
         self.Datos_de_la_empresa_2 = QLabel(self.scrollAreaContents)
@@ -473,9 +468,10 @@ class Ui_MainPages(object):
         self.Basculas.setStyleSheet(u"background-color:transparent;\n"
 "\n"
 "")
+        self.verticalLayout_10 = QVBoxLayout(self.Basculas)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
         self.configuraciones_basculas = QTabWidget(self.Basculas)
         self.configuraciones_basculas.setObjectName(u"configuraciones_basculas")
-        self.configuraciones_basculas.setGeometry(QRect(0, 10, 821, 151))
         self.configuraciones_basculas.setStyleSheet(u"background-color: transparent;")
         self.bascula_Dibal_2 = QWidget()
         self.bascula_Dibal_2.setObjectName(u"bascula_Dibal_2")
@@ -638,6 +634,9 @@ class Ui_MainPages(object):
         self.layout_configuracion_marques_4.addWidget(self.boton_configuracion_marques_6)
 
         self.configuraciones_basculas.addTab(self.bascula_marques_2, "")
+
+        self.verticalLayout_10.addWidget(self.configuraciones_basculas)
+
         self.configuraciones_basculas_2.addTab(self.Basculas, "")
         self.facturacion_electronica = QWidget()
         self.facturacion_electronica.setObjectName(u"facturacion_electronica")
@@ -779,7 +778,7 @@ class Ui_MainPages(object):
         self.retranslateUi(MainPages)
 
         self.pages.setCurrentIndex(4)
-        self.configuraciones_basculas_2.setCurrentIndex(1)
+        self.configuraciones_basculas_2.setCurrentIndex(0)
         self.configuraciones_basculas.setCurrentIndex(0)
 
 
