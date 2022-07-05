@@ -747,7 +747,10 @@ background-color: #1b1e23;</string>
                 <string notr="true"/>
                </property>
                <property name="text">
-                <string>Tercero POS por defecto</string>
+                <string>Tercero POS</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -786,7 +789,10 @@ background-color: #1b1e23;</string>
                 <string notr="true"/>
                </property>
                <property name="text">
-                <string>Lista de precios  por defecto</string>
+                <string>Lista de precios</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -804,7 +810,7 @@ background-color: #1b1e23;</string>
                 <string>Tipo Escaner</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -847,7 +853,7 @@ background-color: #1b1e23;</string>
                <property name="styleSheet">
                 <string notr="true">border: none;
 color:#8a95aa ;
-border-radius:8 ;	
+border-radius:8px ;	
 background-color: #1b1e23;</string>
                </property>
               </widget>
@@ -857,7 +863,7 @@ background-color: #1b1e23;</string>
                <property name="styleSheet">
                 <string notr="true">border: none;
 color:#8a95aa ;
-border-radius:8 ;	
+border-radius:8px ;	
 background-color: #1b1e23;</string>
                </property>
               </widget>
@@ -926,6 +932,12 @@ QLineEdit:focus {
            </item>
            <item>
             <widget class="QTabWidget" name="configuraciones_basculas_2">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>815</height>
+              </size>
+             </property>
              <property name="styleSheet">
               <string notr="true">QTabWidget::pane { /* The tab widget frame */
     border-top: 4px solid #343b48;
@@ -961,7 +973,7 @@ QTabBar::tab:!selected {
 </string>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="tab">
               <attribute name="title">
@@ -1028,6 +1040,18 @@ QLineEdit:focus {
               <layout class="QVBoxLayout" name="verticalLayout_10">
                <item>
                 <widget class="QTabWidget" name="configuraciones_basculas">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>56</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>400</height>
+                  </size>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>

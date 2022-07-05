@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_pagesVPqOer.ui'
+## Form generated from reading UI file 'main_pagesRyxvgN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -262,7 +262,6 @@ class Ui_MainPages(object):
 "	border: 2px solid #568af2;\n"
 "    background-color: #21252d;\n"
 "}")
-
         self.datosEmpresa.addWidget(self.datosEmpresa_nombre)
 
         self.datosEmpresa_razon_social = QLineEdit(self.scrollAreaContents)
@@ -452,6 +451,7 @@ class Ui_MainPages(object):
         self.labelEmpresa_tercero.setObjectName(u"labelEmpresa_tercero")
         self.labelEmpresa_tercero.setFont(font1)
         self.labelEmpresa_tercero.setStyleSheet(u"")
+        self.labelEmpresa_tercero.setAlignment(Qt.AlignCenter)
 
         self.layout_label_4.addWidget(self.labelEmpresa_tercero)
 
@@ -468,6 +468,7 @@ class Ui_MainPages(object):
         self.labelEmpresa_lista_precios.setObjectName(u"labelEmpresa_lista_precios")
         self.labelEmpresa_lista_precios.setFont(font1)
         self.labelEmpresa_lista_precios.setStyleSheet(u"")
+        self.labelEmpresa_lista_precios.setAlignment(Qt.AlignCenter)
 
         self.layout_label_4.addWidget(self.labelEmpresa_lista_precios)
 
@@ -475,7 +476,7 @@ class Ui_MainPages(object):
         self.labelEmpresa_escaner.setObjectName(u"labelEmpresa_escaner")
         self.labelEmpresa_escaner.setFont(font1)
         self.labelEmpresa_escaner.setStyleSheet(u"")
-        self.labelEmpresa_escaner.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.labelEmpresa_escaner.setAlignment(Qt.AlignCenter)
 
         self.layout_label_4.addWidget(self.labelEmpresa_escaner)
 
@@ -498,7 +499,7 @@ class Ui_MainPages(object):
         self.datosEmpresa_tercero.setObjectName(u"datosEmpresa_tercero")
         self.datosEmpresa_tercero.setStyleSheet(u"border: none;\n"
 "color:#8a95aa ;\n"
-"border-radius:8 ;	\n"
+"border-radius:8px ;	\n"
 "background-color: #1b1e23;")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_tercero)
@@ -507,7 +508,7 @@ class Ui_MainPages(object):
         self.datosEmpresa_sucursal.setObjectName(u"datosEmpresa_sucursal")
         self.datosEmpresa_sucursal.setStyleSheet(u"border: none;\n"
 "color:#8a95aa ;\n"
-"border-radius:8 ;	\n"
+"border-radius:8px ;	\n"
 "background-color: #1b1e23;")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_sucursal)
@@ -563,6 +564,7 @@ class Ui_MainPages(object):
 
         self.configuraciones_basculas_2 = QTabWidget(self.scrollAreaContents)
         self.configuraciones_basculas_2.setObjectName(u"configuraciones_basculas_2")
+        self.configuraciones_basculas_2.setMaximumSize(QSize(16777215, 815))
         self.configuraciones_basculas_2.setStyleSheet(u"QTabWidget::pane { /* The tab widget frame */\n"
 "    border-top: 4px solid #343b48;\n"
 "	background-color: #343b48;\n"
@@ -640,6 +642,8 @@ class Ui_MainPages(object):
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
         self.configuraciones_basculas = QTabWidget(self.Basculas)
         self.configuraciones_basculas.setObjectName(u"configuraciones_basculas")
+        self.configuraciones_basculas.setMinimumSize(QSize(0, 56))
+        self.configuraciones_basculas.setMaximumSize(QSize(16777215, 400))
         self.configuraciones_basculas.setStyleSheet(u"")
         self.bascula_Dibal_2 = QWidget()
         self.bascula_Dibal_2.setObjectName(u"bascula_Dibal_2")
@@ -1224,7 +1228,7 @@ class Ui_MainPages(object):
         self.retranslateUi(MainPages)
 
         self.pages.setCurrentIndex(4)
-        self.configuraciones_basculas_2.setCurrentIndex(0)
+        self.configuraciones_basculas_2.setCurrentIndex(1)
         self.configuraciones_basculas.setCurrentIndex(0)
 
 
@@ -1248,9 +1252,9 @@ class Ui_MainPages(object):
         self.labelEmpresa_nit.setText(QCoreApplication.translate("MainPages", u"NIT", None))
         self.labelEmpresa_departamento.setText(QCoreApplication.translate("MainPages", u"Departamento", None))
         self.labelEmpresa_municipio.setText(QCoreApplication.translate("MainPages", u"Municipio", None))
-        self.labelEmpresa_tercero.setText(QCoreApplication.translate("MainPages", u"Tercero POS por defecto", None))
+        self.labelEmpresa_tercero.setText(QCoreApplication.translate("MainPages", u"Tercero POS", None))
         self.labelEmpresa_sucursal.setText(QCoreApplication.translate("MainPages", u"Sucursal", None))
-        self.labelEmpresa_lista_precios.setText(QCoreApplication.translate("MainPages", u"Lista de precios  por defecto", None))
+        self.labelEmpresa_lista_precios.setText(QCoreApplication.translate("MainPages", u"Lista de precios", None))
         self.labelEmpresa_escaner.setText(QCoreApplication.translate("MainPages", u"Tipo Escaner", None))
         self.labelEmpresa_licencia.setText(QCoreApplication.translate("MainPages", u"Licencia", None))
         self.Datos_de_la_empresa_2.setText(QCoreApplication.translate("MainPages", u"Configuracion de Impresoras y Basculas", None))

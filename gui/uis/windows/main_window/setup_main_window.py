@@ -23,8 +23,7 @@ import sys
 import os
 
 # Paginas
-
-
+from gui.uis.pages.ui_main_pages import Ui_MainPages
 #Conculta de la base de datos
 from base_de_datos.consulta import empresa, datos_usuarios
 
@@ -542,23 +541,8 @@ class SetupMainWindow:
         self.line_edit_rs= QLineEdit(empresa.razon_social)
         self.button_aceptar= QPushButton("Aceptar datos")
         
-        
-        #PAGE5
-        
-        
         #PAGE 5
         #////////////////////////////////////////////////////////
-        self.configuracion_boton_factura_eliminar= PyPushButton(
-            text = "Boton sin icono #1",
-            radius  =8,
-            color = self.themes["app_color"]["text_foreground"],
-            bg_color = self.themes["app_color"]["dark_one"],
-            bg_color_hover = self.themes["app_color"]["dark_three"],
-            bg_color_pressed = self.themes["app_color"]["dark_four"]
-        )
-        self.configuracion_boton_factura_eliminar.setMinimumHeight(40)
-        
-        
         # ADD WIDGETS
         self.ui.load_pages.row_1_layout.addWidget(self.circular_progress_1)
         self.ui.load_pages.row_1_layout.addWidget(self.circular_progress_2)
