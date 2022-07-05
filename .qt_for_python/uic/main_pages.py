@@ -85,7 +85,7 @@ class Ui_MainPages(object):
         self.scroll_area.setWidgetResizable(True)
         self.contents = QWidget()
         self.contents.setObjectName(u"contents")
-        self.contents.setGeometry(QRect(0, 0, 214, 266))
+        self.contents.setGeometry(QRect(0, 0, 832, 553))
         self.contents.setStyleSheet(u"background: transparent;")
         self.verticalLayout = QVBoxLayout(self.contents)
         self.verticalLayout.setSpacing(15)
@@ -248,16 +248,58 @@ class Ui_MainPages(object):
         self.datosEmpresa.setContentsMargins(20, 0, 20, -1)
         self.datosEmpresa_nombre = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_nombre.setObjectName(u"datosEmpresa_nombre")
+        self.datosEmpresa_nombre.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.datosEmpresa.addWidget(self.datosEmpresa_nombre)
 
         self.datosEmpresa_razon_social = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_razon_social.setObjectName(u"datosEmpresa_razon_social")
+        self.datosEmpresa_razon_social.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.datosEmpresa.addWidget(self.datosEmpresa_razon_social)
 
         self.datosEmpresa_direccion = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_direccion.setObjectName(u"datosEmpresa_direccion")
+        self.datosEmpresa_direccion.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.datosEmpresa.addWidget(self.datosEmpresa_direccion)
 
@@ -298,16 +340,58 @@ class Ui_MainPages(object):
         self.datosEmpresa1.setContentsMargins(20, 0, 20, -1)
         self.datosEmpresa_telefono = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_telefono.setObjectName(u"datosEmpresa_telefono")
+        self.datosEmpresa_telefono.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.datosEmpresa1.addWidget(self.datosEmpresa_telefono)
 
         self.datosEmpresa_tipo_regimen = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_tipo_regimen.setObjectName(u"datosEmpresa_tipo_regimen")
+        self.datosEmpresa_tipo_regimen.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.datosEmpresa1.addWidget(self.datosEmpresa_tipo_regimen)
 
         self.datosEmpresa_nit = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_nit.setObjectName(u"datosEmpresa_nit")
+        self.datosEmpresa_nit.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.datosEmpresa1.addWidget(self.datosEmpresa_nit)
 
@@ -341,11 +425,19 @@ class Ui_MainPages(object):
         self.datosEmpresa3.setContentsMargins(20, 0, 20, -1)
         self.datosEmpresa_departamento = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_departamento.setObjectName(u"datosEmpresa_departamento")
+        self.datosEmpresa_departamento.setStyleSheet(u"border: none;\n"
+"color:#8a95aa ;\n"
+"border-radius:8 ;	\n"
+"background-color: #1b1e23;")
 
         self.datosEmpresa3.addWidget(self.datosEmpresa_departamento)
 
         self.datosEmpresa_municipio = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_municipio.setObjectName(u"datosEmpresa_municipio")
+        self.datosEmpresa_municipio.setStyleSheet(u"border: none;\n"
+"color:#8a95aa ;\n"
+"border-radius:8 ;	\n"
+"background-color: #1b1e23;")
 
         self.datosEmpresa3.addWidget(self.datosEmpresa_municipio)
 
@@ -404,27 +496,57 @@ class Ui_MainPages(object):
         self.datosEmpresa4.setContentsMargins(20, 0, 20, -1)
         self.datosEmpresa_tercero = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_tercero.setObjectName(u"datosEmpresa_tercero")
+        self.datosEmpresa_tercero.setStyleSheet(u"border: none;\n"
+"color:#8a95aa ;\n"
+"border-radius:8 ;	\n"
+"background-color: #1b1e23;")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_tercero)
 
         self.datosEmpresa_sucursal = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_sucursal.setObjectName(u"datosEmpresa_sucursal")
+        self.datosEmpresa_sucursal.setStyleSheet(u"border: none;\n"
+"color:#8a95aa ;\n"
+"border-radius:8 ;	\n"
+"background-color: #1b1e23;")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_sucursal)
 
         self.datosEmpresa_lista_precios = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_lista_precios.setObjectName(u"datosEmpresa_lista_precios")
+        self.datosEmpresa_lista_precios.setStyleSheet(u"border: none;\n"
+"color:#8a95aa ;\n"
+"border-radius:8 ;	\n"
+"background-color: #1b1e23;")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_lista_precios)
 
         self.datosEmpresa_tipo_escaner = QComboBox(self.scrollAreaContents)
         self.datosEmpresa_tipo_escaner.setObjectName(u"datosEmpresa_tipo_escaner")
+        self.datosEmpresa_tipo_escaner.setStyleSheet(u"border: none;\n"
+"color:#8a95aa ;\n"
+"border-radius:8 ;	\n"
+"background-color: #1b1e23;")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_tipo_escaner)
 
         self.datosEmpresa_licencia = QLineEdit(self.scrollAreaContents)
         self.datosEmpresa_licencia.setObjectName(u"datosEmpresa_licencia")
         self.datosEmpresa_licencia.setMaximumSize(QSize(80, 16777215))
+        self.datosEmpresa_licencia.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.datosEmpresa4.addWidget(self.datosEmpresa_licencia)
 
@@ -441,7 +563,39 @@ class Ui_MainPages(object):
 
         self.configuraciones_basculas_2 = QTabWidget(self.scrollAreaContents)
         self.configuraciones_basculas_2.setObjectName(u"configuraciones_basculas_2")
-        self.configuraciones_basculas_2.setStyleSheet(u"background-color: transparent;")
+        self.configuraciones_basculas_2.setStyleSheet(u"QTabWidget::pane { /* The tab widget frame */\n"
+"    border-top: 4px solid #343b48;\n"
+"	background-color: #343b48;\n"
+"	border-radius:8px\n"
+"}\n"
+"QTabWidget::tab-bar {\n"
+"    left: 10px; /* move to the right by 5px */\n"
+"}\n"
+"QTabBar::tab {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
+"                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
+"    border: 2px solid #343b48;\n"
+"    border-bottom-color: #C2C7CB; /* same as the pane color */\n"
+"    border-top-left-radius: 8px;\n"
+"    border-top-right-radius: 8px;\n"
+"    min-width: 8px;\n"
+"    padding: 2px;\n"
+"}\n"
+"QTabBar::tab:selected, QTabBar::tab:hover {\n"
+"    background:  #1b1e23;\n"
+"}\n"
+"QTabBar::tab:selected {\n"
+"    border-color: #568af2;\n"
+"    border-bottom-color: #568af2; /* same as pane color */\n"
+"}\n"
+"QTabBar::tab:!selected {\n"
+"	background: #1b1e23;\n"
+"	border-bottom-color: #8a95aa;\n"
+"    margin-top: 2px; /* make no"
+                        "n-selected tabs look smaller */\n"
+"}\n"
+"")
         self.tab = QWidget()
         self.tab.setObjectName(u"tab")
         self.verticalLayoutWidget_2 = QWidget(self.tab)
@@ -459,6 +613,20 @@ class Ui_MainPages(object):
         self.config_linea_pos_2 = QLineEdit(self.verticalLayoutWidget_2)
         self.config_linea_pos_2.setObjectName(u"config_linea_pos_2")
         self.config_linea_pos_2.setMaximumSize(QSize(154, 16777215))
+        self.config_linea_pos_2.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_pos_2.addWidget(self.config_linea_pos_2)
 
@@ -472,23 +640,41 @@ class Ui_MainPages(object):
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
         self.configuraciones_basculas = QTabWidget(self.Basculas)
         self.configuraciones_basculas.setObjectName(u"configuraciones_basculas")
-        self.configuraciones_basculas.setStyleSheet(u"background-color: transparent;")
+        self.configuraciones_basculas.setStyleSheet(u"")
         self.bascula_Dibal_2 = QWidget()
         self.bascula_Dibal_2.setObjectName(u"bascula_Dibal_2")
         self.horizontalLayoutWidget_16 = QWidget(self.bascula_Dibal_2)
         self.horizontalLayoutWidget_16.setObjectName(u"horizontalLayoutWidget_16")
-        self.horizontalLayoutWidget_16.setGeometry(QRect(0, 30, 531, 31))
+        self.horizontalLayoutWidget_16.setGeometry(QRect(0, 30, 531, 34))
         self.layout_configuracion_dibal_5 = QHBoxLayout(self.horizontalLayoutWidget_16)
         self.layout_configuracion_dibal_5.setObjectName(u"layout_configuracion_dibal_5")
         self.layout_configuracion_dibal_5.setContentsMargins(0, 0, 0, 0)
         self.configuracion_linea_dibal_3 = QLineEdit(self.horizontalLayoutWidget_16)
         self.configuracion_linea_dibal_3.setObjectName(u"configuracion_linea_dibal_3")
         self.configuracion_linea_dibal_3.setMaximumSize(QSize(500, 16777215))
+        self.configuracion_linea_dibal_3.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_dibal_5.addWidget(self.configuracion_linea_dibal_3)
 
         self.configuracion_secciones_2 = QComboBox(self.horizontalLayoutWidget_16)
         self.configuracion_secciones_2.setObjectName(u"configuracion_secciones_2")
+        self.configuracion_secciones_2.setStyleSheet(u"border: none;\n"
+"color:#8a95aa ;\n"
+"border-radius:8 ;	\n"
+"background-color: #1b1e23;")
 
         self.layout_configuracion_dibal_5.addWidget(self.configuracion_secciones_2)
 
@@ -500,18 +686,46 @@ class Ui_MainPages(object):
         self.config_label_dibal_5.setGeometry(QRect(460, 10, 71, 16))
         self.horizontalLayoutWidget_17 = QWidget(self.bascula_Dibal_2)
         self.horizontalLayoutWidget_17.setObjectName(u"horizontalLayoutWidget_17")
-        self.horizontalLayoutWidget_17.setGeometry(QRect(0, 80, 531, 31))
+        self.horizontalLayoutWidget_17.setGeometry(QRect(0, 80, 531, 34))
         self.layout_configuracion_dibal_6 = QHBoxLayout(self.horizontalLayoutWidget_17)
         self.layout_configuracion_dibal_6.setObjectName(u"layout_configuracion_dibal_6")
         self.layout_configuracion_dibal_6.setContentsMargins(0, 0, 0, 0)
         self.configuracion_linea_dibal_4 = QLineEdit(self.horizontalLayoutWidget_17)
         self.configuracion_linea_dibal_4.setObjectName(u"configuracion_linea_dibal_4")
         self.configuracion_linea_dibal_4.setMaximumSize(QSize(500, 16777215))
+        self.configuracion_linea_dibal_4.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_dibal_6.addWidget(self.configuracion_linea_dibal_4)
 
         self.boton_configuracion_dibal_2 = QPushButton(self.horizontalLayoutWidget_17)
         self.boton_configuracion_dibal_2.setObjectName(u"boton_configuracion_dibal_2")
+        self.boton_configuracion_dibal_2.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"    padding-left: 10px;\n"
+"    padding-right: 5px;\n"
+"    color: #8a95aa;\n"
+"	border-radius: 8;	\n"
+"	background-color: #1b1e23;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: #21252d;\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: #272c36;\n"
+"}")
 
         self.layout_configuracion_dibal_6.addWidget(self.boton_configuracion_dibal_2)
 
@@ -530,6 +744,20 @@ class Ui_MainPages(object):
         self.configuracion_linea_epelsa_3 = QLineEdit(self.horizontalLayoutWidget_18)
         self.configuracion_linea_epelsa_3.setObjectName(u"configuracion_linea_epelsa_3")
         self.configuracion_linea_epelsa_3.setMaximumSize(QSize(545, 16777215))
+        self.configuracion_linea_epelsa_3.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_epelsa_3.addWidget(self.configuracion_linea_epelsa_3)
 
@@ -545,11 +773,39 @@ class Ui_MainPages(object):
         self.configuracion_linea_epelsa_4 = QLineEdit(self.horizontalLayoutWidget_19)
         self.configuracion_linea_epelsa_4.setObjectName(u"configuracion_linea_epelsa_4")
         self.configuracion_linea_epelsa_4.setMaximumSize(QSize(500, 16777215))
+        self.configuracion_linea_epelsa_4.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_dibal_7.addWidget(self.configuracion_linea_epelsa_4)
 
         self.boton_configuracion_epelsa_2 = QPushButton(self.horizontalLayoutWidget_19)
         self.boton_configuracion_epelsa_2.setObjectName(u"boton_configuracion_epelsa_2")
+        self.boton_configuracion_epelsa_2.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"    padding-left: 10px;\n"
+"    padding-right: 5px;\n"
+"    color: #8a95aa;\n"
+"	border-radius: 8;	\n"
+"	background-color: #1b1e23;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: #21252d;\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: #272c36;\n"
+"}")
 
         self.layout_configuracion_dibal_7.addWidget(self.boton_configuracion_epelsa_2)
 
@@ -571,6 +827,20 @@ class Ui_MainPages(object):
         self.configuracion_linea_ishida_3 = QLineEdit(self.horizontalLayoutWidget_20)
         self.configuracion_linea_ishida_3.setObjectName(u"configuracion_linea_ishida_3")
         self.configuracion_linea_ishida_3.setMaximumSize(QSize(545, 16777215))
+        self.configuracion_linea_ishida_3.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_epelsa_4.addWidget(self.configuracion_linea_ishida_3)
 
@@ -583,11 +853,39 @@ class Ui_MainPages(object):
         self.configuracion_linea_ishida_4 = QLineEdit(self.horizontalLayoutWidget_21)
         self.configuracion_linea_ishida_4.setObjectName(u"configuracion_linea_ishida_4")
         self.configuracion_linea_ishida_4.setMaximumSize(QSize(500, 16777215))
+        self.configuracion_linea_ishida_4.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_dibal_8.addWidget(self.configuracion_linea_ishida_4)
 
         self.boton_configuracion_ishida_2 = QPushButton(self.horizontalLayoutWidget_21)
         self.boton_configuracion_ishida_2.setObjectName(u"boton_configuracion_ishida_2")
+        self.boton_configuracion_ishida_2.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"    padding-left: 10px;\n"
+"    padding-right: 5px;\n"
+"    color: #8a95aa;\n"
+"	border-radius: 8;	\n"
+"	background-color: #1b1e23;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: #21252d;\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: #272c36;\n"
+"}")
 
         self.layout_configuracion_dibal_8.addWidget(self.boton_configuracion_ishida_2)
 
@@ -606,6 +904,20 @@ class Ui_MainPages(object):
         self.configuracion_linea_marques_2 = QLineEdit(self.horizontalLayoutWidget_22)
         self.configuracion_linea_marques_2.setObjectName(u"configuracion_linea_marques_2")
         self.configuracion_linea_marques_2.setMaximumSize(QSize(545, 16777215))
+        self.configuracion_linea_marques_2.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_marques_3.addWidget(self.configuracion_linea_marques_2)
 
@@ -620,16 +932,58 @@ class Ui_MainPages(object):
         self.layout_configuracion_marques_4.setContentsMargins(0, 0, 0, 0)
         self.boton_configuracion_marques_4 = QPushButton(self.horizontalLayoutWidget_23)
         self.boton_configuracion_marques_4.setObjectName(u"boton_configuracion_marques_4")
+        self.boton_configuracion_marques_4.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"    padding-left: 10px;\n"
+"    padding-right: 5px;\n"
+"    color: #8a95aa;\n"
+"	border-radius: 8;	\n"
+"	background-color: #1b1e23;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: #21252d;\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: #272c36;\n"
+"}")
 
         self.layout_configuracion_marques_4.addWidget(self.boton_configuracion_marques_4)
 
         self.boton_configuracion_marques_5 = QPushButton(self.horizontalLayoutWidget_23)
         self.boton_configuracion_marques_5.setObjectName(u"boton_configuracion_marques_5")
+        self.boton_configuracion_marques_5.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"    padding-left: 10px;\n"
+"    padding-right: 5px;\n"
+"    color: #8a95aa;\n"
+"	border-radius: 8;	\n"
+"	background-color: #1b1e23;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: #21252d;\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: #272c36;\n"
+"}")
 
         self.layout_configuracion_marques_4.addWidget(self.boton_configuracion_marques_5)
 
         self.boton_configuracion_marques_6 = QPushButton(self.horizontalLayoutWidget_23)
         self.boton_configuracion_marques_6.setObjectName(u"boton_configuracion_marques_6")
+        self.boton_configuracion_marques_6.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"    padding-left: 10px;\n"
+"    padding-right: 5px;\n"
+"    color: #8a95aa;\n"
+"	border-radius: 8;	\n"
+"	background-color: #1b1e23;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: #21252d;\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: #272c36;\n"
+"}")
 
         self.layout_configuracion_marques_4.addWidget(self.boton_configuracion_marques_6)
 
@@ -651,11 +1005,39 @@ class Ui_MainPages(object):
         self.layout_configuracion_factura.setContentsMargins(0, 0, 0, 0)
         self.configuracion_linea_factura_token = QLineEdit(self.horizontalLayoutWidget_13)
         self.configuracion_linea_factura_token.setObjectName(u"configuracion_linea_factura_token")
+        self.configuracion_linea_factura_token.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_factura.addWidget(self.configuracion_linea_factura_token)
 
         self.configuracion_linea_factura_Dian = QLineEdit(self.horizontalLayoutWidget_13)
         self.configuracion_linea_factura_Dian.setObjectName(u"configuracion_linea_factura_Dian")
+        self.configuracion_linea_factura_Dian.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_factura.addWidget(self.configuracion_linea_factura_Dian)
 
@@ -670,17 +1052,39 @@ class Ui_MainPages(object):
         self.layout_configuracion_factura_2.setContentsMargins(0, 0, 0, 0)
         self.configuracion_linea_factura_impuesto_bolsa = QComboBox(self.horizontalLayoutWidget_14)
         self.configuracion_linea_factura_impuesto_bolsa.setObjectName(u"configuracion_linea_factura_impuesto_bolsa")
+        self.configuracion_linea_factura_impuesto_bolsa.setStyleSheet(u"border: none;\n"
+"color:#8a95aa ;\n"
+"border-radius:8 ;	\n"
+"background-color: #1b1e23;")
 
         self.layout_configuracion_factura_2.addWidget(self.configuracion_linea_factura_impuesto_bolsa)
 
         self.configuracion_linea_factura_Impuesto_excluido = QComboBox(self.horizontalLayoutWidget_14)
         self.configuracion_linea_factura_Impuesto_excluido.setObjectName(u"configuracion_linea_factura_Impuesto_excluido")
+        self.configuracion_linea_factura_Impuesto_excluido.setStyleSheet(u"border: none;\n"
+"color:#8a95aa ;\n"
+"border-radius:8 ;	\n"
+"background-color: #1b1e23;")
 
         self.layout_configuracion_factura_2.addWidget(self.configuracion_linea_factura_Impuesto_excluido)
 
         self.configuracion_linea_factura_email = QLineEdit(self.horizontalLayoutWidget_14)
         self.configuracion_linea_factura_email.setObjectName(u"configuracion_linea_factura_email")
         self.configuracion_linea_factura_email.setMaximumSize(QSize(411, 16777215))
+        self.configuracion_linea_factura_email.setStyleSheet(u"QLineEdit {\n"
+"	background-color: #1b1e23;\n"
+"	border-radius: 8px;\n"
+"	border: 2px solid transparent;\n"
+"	padding-left: 10px;\n"
+"    padding-right: 10px;\n"
+"	selection-color: #f5f6f9;\n"
+"	selection-background-color: #568af2;\n"
+"    color: #8a95aa;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid #568af2;\n"
+"    background-color: #21252d;\n"
+"}")
 
         self.layout_configuracion_factura_2.addWidget(self.configuracion_linea_factura_email)
 
@@ -702,16 +1106,58 @@ class Ui_MainPages(object):
         self.layout_configuracion_factura_3.setContentsMargins(20, -1, 20, -1)
         self.configuracion_boton_factura_eliminar = QPushButton(self.scrollAreaContents)
         self.configuracion_boton_factura_eliminar.setObjectName(u"configuracion_boton_factura_eliminar")
+        self.configuracion_boton_factura_eliminar.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"    padding-left: 10px;\n"
+"    padding-right: 5px;\n"
+"    color: #8a95aa;\n"
+"	border-radius: 8;	\n"
+"	background-color: #1b1e23;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: #21252d;\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: #272c36;\n"
+"}")
 
         self.layout_configuracion_factura_3.addWidget(self.configuracion_boton_factura_eliminar)
 
         self.configuracion_boton_factura_limpiar = QPushButton(self.scrollAreaContents)
         self.configuracion_boton_factura_limpiar.setObjectName(u"configuracion_boton_factura_limpiar")
+        self.configuracion_boton_factura_limpiar.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"    padding-left: 10px;\n"
+"    padding-right: 5px;\n"
+"    color: #8a95aa;\n"
+"	border-radius: 8;	\n"
+"	background-color: #1b1e23;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: #21252d;\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: #272c36;\n"
+"}")
 
         self.layout_configuracion_factura_3.addWidget(self.configuracion_boton_factura_limpiar)
 
         self.configuracion_boton_factura_guardar = QPushButton(self.scrollAreaContents)
         self.configuracion_boton_factura_guardar.setObjectName(u"configuracion_boton_factura_guardar")
+        self.configuracion_boton_factura_guardar.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"    padding-left: 10px;\n"
+"    padding-right: 5px;\n"
+"    color: #8a95aa;\n"
+"	border-radius: 8;	\n"
+"	background-color: #1b1e23;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: #21252d;\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: #272c36;\n"
+"}")
 
         self.layout_configuracion_factura_3.addWidget(self.configuracion_boton_factura_guardar)
 

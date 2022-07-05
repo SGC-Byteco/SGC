@@ -548,6 +548,16 @@ class SetupMainWindow:
         
         #PAGE 5
         #////////////////////////////////////////////////////////
+        self.configuracion_boton_factura_eliminar= PyPushButton(
+            text = "Boton sin icono #1",
+            radius  =8,
+            color = self.themes["app_color"]["text_foreground"],
+            bg_color = self.themes["app_color"]["dark_one"],
+            bg_color_hover = self.themes["app_color"]["dark_three"],
+            bg_color_pressed = self.themes["app_color"]["dark_four"]
+        )
+        self.configuracion_boton_factura_eliminar.setMinimumHeight(40)
+        
         
         # ADD WIDGETS
         self.ui.load_pages.row_1_layout.addWidget(self.circular_progress_1)
