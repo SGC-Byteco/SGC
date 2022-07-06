@@ -157,6 +157,12 @@ class MainWindow(QMainWindow):
 
         # DEBUG
         print(f"Button {btn.objectName()}, clicked!")
+    
+    #Señal de departamento 
+    def departamento_municipio(self,departamento):
+        print("cambiaste de departamento", departamento)
+    
+        
 
     # LEFT MENU BTN IS RELEASED
     # Run function when btn is released

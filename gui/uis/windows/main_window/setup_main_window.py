@@ -25,7 +25,7 @@ import os
 # Paginas
 from gui.uis.pages.ui_main_pages import Ui_MainPages
 #Conculta de la base de datos
-from base_de_datos.consulta import empresa, datos_usuarios
+from base_de_datos.consulta import *
 
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
@@ -534,14 +534,45 @@ class SetupMainWindow:
             self.table_widget.setRowHeight(row_number, 22)
             
         #PAGE4
-        self.line_edit_name= QLineEdit(empresa.nombre)
+        self.line_edit_name= QLineEdit()
+        self.line_edit_name.setPlaceholderText("C")
         self.line_edit_nit= QLineEdit(empresa.nit)
         self.line_edit_dir= QLineEdit(empresa.direccion)
         self.line_edit_tel= QLineEdit(empresa.telefono)
         self.line_edit_rs= QLineEdit(empresa.razon_social)
         self.button_aceptar= QPushButton("Aceptar datos")
+    
+        #PAGINA 5
+        self.ui.load_pages.datosEmpresa_nombre.setText(empresa.nombre)
+        self.ui.load_pages.datosEmpresa_razon_social.setText(empresa.razon_social)
+        self.ui.load_pages.datosEmpresa_direccion.setText(empresa.direccion)
+        self.ui.load_pages.datosEmpresa_telefono.setText(empresa.telefono)
+        self.ui.load_pages.datosEmpresa_tipo_regimen.setText(empresa.direccion)
+        self.ui.load_pages.datosEmpresa_nit.setText(empresa.nit)
         
-        #PAGE 5
+        self.ui.load_pages.datosEmpresa_departamento.addItems(departamentos)
+        if departamento.id == municipio.departamento_id:
+            self.ui.load_pages.datosEmpresa_municipio.addItems(municipios)
+        #Señal de cambio de departamento
+        self.ui.load_pages.datosEmpresa_departamento.currentTextChanged.connect(self.departamento_municipio)
+    
+        
+        self.ui.load_pages.datosEmpresa_tercero.addItems(terceros)
+        self.ui.load_pages.datosEmpresa_sucursal.addItems(sucursales)
+        self.ui.load_pages.datosEmpresa_lista_precios.addItems(lista_precios)
+        self.ui.load_pages.datosEmpresa_tipo_escaner.addItems([" ","1"])
+        self.ui.load_pages.datosEmpresa_licencia.setText(empresa.licencia)
+        
+        # Configuracion de impresora pos
+        self.ui.load_pages.config_linea_pos_2.setText(empresa.cantidad_caracteres)
+        
+        #Configuracion de basculas
+        # Bascula Dibal
+        
+        
+        
+        
+            
         #////////////////////////////////////////////////////////
         # ADD WIDGETS
         self.ui.load_pages.row_1_layout.addWidget(self.circular_progress_1)
