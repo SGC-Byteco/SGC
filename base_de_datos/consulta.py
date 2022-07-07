@@ -53,6 +53,12 @@ try:
             lista_precios.append(precios.nombre)
         
         #Baculas no aparece
+        # Secciones Bascula Dibal 
+        cursor.execute("SELECT  secciones_dibal FROM dbo.gen_empresa;")
+        datos_secciones=cursor.fetchall()
+        secciones=[]
+        for seccion in datos_secciones:
+            secciones.append(seccion.secciones_dibal)
         #Licencia por defecto
         #Cantidad de caracteres por defecto =48
             

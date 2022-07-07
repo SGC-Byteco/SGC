@@ -171,8 +171,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>832</width>
-            <height>553</height>
+            <width>214</width>
+            <height>266</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1056,7 +1056,7 @@ QLineEdit:focus {
                   <string notr="true"/>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>3</number>
                  </property>
                  <widget class="QWidget" name="bascula_Dibal_2">
                   <attribute name="title">
@@ -1067,7 +1067,7 @@ QLineEdit:focus {
                     <rect>
                      <x>0</x>
                      <y>30</y>
-                     <width>531</width>
+                     <width>631</width>
                      <height>34</height>
                     </rect>
                    </property>
@@ -1100,6 +1100,12 @@ QLineEdit:focus {
                     </item>
                     <item>
                      <widget class="QComboBox" name="configuracion_secciones_2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777212</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="styleSheet">
                        <string notr="true">border: none;
 color:#8a95aa ;
@@ -1141,7 +1147,7 @@ background-color: #1b1e23;</string>
                     <rect>
                      <x>0</x>
                      <y>80</y>
-                     <width>531</width>
+                     <width>631</width>
                      <height>34</height>
                     </rect>
                    </property>
@@ -1220,16 +1226,25 @@ QPushButton:pressed {
                     <rect>
                      <x>0</x>
                      <y>30</y>
-                     <width>531</width>
+                     <width>631</width>
                      <height>31</height>
                     </rect>
                    </property>
                    <layout class="QHBoxLayout" name="layout_configuracion_epelsa_3">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
                     <item>
                      <widget class="QLineEdit" name="configuracion_linea_epelsa_3">
+                      <property name="minimumSize">
+                       <size>
+                        <width>80</width>
+                        <height>0</height>
+                       </size>
+                      </property>
                       <property name="maximumSize">
                        <size>
-                        <width>545</width>
+                        <width>649</width>
                         <height>16777215</height>
                        </size>
                       </property>
@@ -1271,7 +1286,7 @@ QLineEdit:focus {
                     <rect>
                      <x>0</x>
                      <y>80</y>
-                     <width>531</width>
+                     <width>631</width>
                      <height>31</height>
                     </rect>
                    </property>
@@ -1363,7 +1378,7 @@ QPushButton:pressed {
                     <rect>
                      <x>0</x>
                      <y>30</y>
-                     <width>531</width>
+                     <width>631</width>
                      <height>31</height>
                     </rect>
                    </property>
@@ -1372,7 +1387,7 @@ QPushButton:pressed {
                      <widget class="QLineEdit" name="configuracion_linea_ishida_3">
                       <property name="maximumSize">
                        <size>
-                        <width>545</width>
+                        <width>630</width>
                         <height>16777215</height>
                        </size>
                       </property>
@@ -1401,7 +1416,7 @@ QLineEdit:focus {
                     <rect>
                      <x>0</x>
                      <y>80</y>
-                     <width>531</width>
+                     <width>631</width>
                      <height>31</height>
                     </rect>
                    </property>
@@ -1480,7 +1495,7 @@ QPushButton:pressed {
                     <rect>
                      <x>0</x>
                      <y>30</y>
-                     <width>531</width>
+                     <width>631</width>
                      <height>31</height>
                     </rect>
                    </property>
@@ -1489,7 +1504,7 @@ QPushButton:pressed {
                      <widget class="QLineEdit" name="configuracion_linea_marques_2">
                       <property name="maximumSize">
                        <size>
-                        <width>545</width>
+                        <width>637</width>
                         <height>16777215</height>
                        </size>
                       </property>
@@ -1531,7 +1546,7 @@ QLineEdit:focus {
                     <rect>
                      <x>30</x>
                      <y>70</y>
-                     <width>491</width>
+                     <width>601</width>
                      <height>41</height>
                     </rect>
                    </property>
@@ -1911,8 +1926,8 @@ QPushButton:pressed {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>822</width>
-            <height>499</height>
+            <width>98</width>
+            <height>28</height>
            </rect>
           </property>
           <widget class="QWidget" name="verticalLayoutWidget">

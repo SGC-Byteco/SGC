@@ -541,7 +541,7 @@ class SetupMainWindow:
         self.line_edit_tel= QLineEdit(empresa.telefono)
         self.line_edit_rs= QLineEdit(empresa.razon_social)
         self.button_aceptar= QPushButton("Aceptar datos")
-    
+    # /////////////////////////////////////////////////////////////////////////////////////////
         #PAGINA 5
         self.ui.load_pages.datosEmpresa_nombre.setText(empresa.nombre)
         self.ui.load_pages.datosEmpresa_razon_social.setText(empresa.razon_social)
@@ -560,19 +560,37 @@ class SetupMainWindow:
         self.ui.load_pages.datosEmpresa_tercero.addItems(terceros)
         self.ui.load_pages.datosEmpresa_sucursal.addItems(sucursales)
         self.ui.load_pages.datosEmpresa_lista_precios.addItems(lista_precios)
-        self.ui.load_pages.datosEmpresa_tipo_escaner.addItems([" ","1"])
+        self.ui.load_pages.datosEmpresa_tipo_escaner.addItems(["Bascula Dibal","Bascula Marques","Codigo de Barras"
+        "Bascula Epelsa","Despacho","Etiqueta por Producto"])
         self.ui.load_pages.datosEmpresa_licencia.setText(empresa.licencia)
         
         # Configuracion de impresora pos
-        self.ui.load_pages.config_linea_pos_2.setText(empresa.cantidad_caracteres)
+        self.ui.load_pages.config_linea_pos_2.setText(str(empresa.cantidad_caracteres))
         
         #Configuracion de basculas
         # Bascula Dibal
+        self.ui.load_pages.configuracion_linea_dibal_3.setText(empresa.ruta_archivo_tiquetes_dibal)
+        self.ui.load_pages.configuracion_linea_dibal_4.setText(empresa.ruta_archivo_tx_dival)
+        self.ui.load_pages.configuracion_secciones_2.addItems(["0","1","2","3","4"])
         
+        # Bascula Epelsa
+        self.ui.load_pages.configuracion_linea_epelsa_3.setText(empresa.ruta_archivo_tiquetes_epelsa)
+        self.ui.load_pages.configuracion_linea_epelsa_4.setText(empresa.ruta_archivo_precios_epelsa)
         
+        # Bascula ishida
+        self.ui.load_pages.configuracion_linea_ishida_3.setText(empresa.ruta_archivo_txt_ishida)
+        self.ui.load_pages.configuracion_linea_ishida_4.setText(empresa.ruta_archivo_tiquetes_ishida)
         
+        # Bascula Marques
+        self.ui.load_pages.configuracion_linea_marques_2.setText(empresa.ruta_ip_marques)
         
-            
+        # Facturacion Electronica
+        self.ui.load_pages.configuracion_linea_factura_token.setText(empresa.token_fac_elect)
+        self.ui.load_pages.configuracion_linea_factura_Dian.setText("N/A")
+        self.ui.load_pages.configuracion_linea_factura_impuesto_bolsa.addItems([str(empresa.producto_bolsa_id)])
+        self.ui.load_pages.configuracion_linea_factura_Impuesto_excluido.addItems([str(empresa.gen_iva_excluido_id)])
+        self.ui.load_pages.configuracion_linea_factura_email.setText(empresa.email_backup_fact_elect)
+        
         #////////////////////////////////////////////////////////
         # ADD WIDGETS
         self.ui.load_pages.row_1_layout.addWidget(self.circular_progress_1)

@@ -85,7 +85,7 @@ class Ui_MainPages(object):
         self.scroll_area.setWidgetResizable(True)
         self.contents = QWidget()
         self.contents.setObjectName(u"contents")
-        self.contents.setGeometry(QRect(0, 0, 832, 553))
+        self.contents.setGeometry(QRect(0, 0, 214, 266))
         self.contents.setStyleSheet(u"background: transparent;")
         self.verticalLayout = QVBoxLayout(self.contents)
         self.verticalLayout.setSpacing(15)
@@ -650,7 +650,7 @@ class Ui_MainPages(object):
         self.bascula_Dibal_2.setObjectName(u"bascula_Dibal_2")
         self.horizontalLayoutWidget_16 = QWidget(self.bascula_Dibal_2)
         self.horizontalLayoutWidget_16.setObjectName(u"horizontalLayoutWidget_16")
-        self.horizontalLayoutWidget_16.setGeometry(QRect(0, 30, 531, 34))
+        self.horizontalLayoutWidget_16.setGeometry(QRect(0, 30, 631, 34))
         self.layout_configuracion_dibal_5 = QHBoxLayout(self.horizontalLayoutWidget_16)
         self.layout_configuracion_dibal_5.setObjectName(u"layout_configuracion_dibal_5")
         self.layout_configuracion_dibal_5.setContentsMargins(0, 0, 0, 0)
@@ -676,6 +676,7 @@ class Ui_MainPages(object):
 
         self.configuracion_secciones_2 = QComboBox(self.horizontalLayoutWidget_16)
         self.configuracion_secciones_2.setObjectName(u"configuracion_secciones_2")
+        self.configuracion_secciones_2.setMaximumSize(QSize(16777212, 16777215))
         self.configuracion_secciones_2.setStyleSheet(u"border: none;\n"
 "color:#8a95aa ;\n"
 "border-radius:8 ;	\n"
@@ -691,7 +692,7 @@ class Ui_MainPages(object):
         self.config_label_dibal_5.setGeometry(QRect(460, 10, 71, 16))
         self.horizontalLayoutWidget_17 = QWidget(self.bascula_Dibal_2)
         self.horizontalLayoutWidget_17.setObjectName(u"horizontalLayoutWidget_17")
-        self.horizontalLayoutWidget_17.setGeometry(QRect(0, 80, 531, 34))
+        self.horizontalLayoutWidget_17.setGeometry(QRect(0, 80, 631, 34))
         self.layout_configuracion_dibal_6 = QHBoxLayout(self.horizontalLayoutWidget_17)
         self.layout_configuracion_dibal_6.setObjectName(u"layout_configuracion_dibal_6")
         self.layout_configuracion_dibal_6.setContentsMargins(0, 0, 0, 0)
@@ -742,13 +743,15 @@ class Ui_MainPages(object):
         self.bascula_epelsa_2.setObjectName(u"bascula_epelsa_2")
         self.horizontalLayoutWidget_18 = QWidget(self.bascula_epelsa_2)
         self.horizontalLayoutWidget_18.setObjectName(u"horizontalLayoutWidget_18")
-        self.horizontalLayoutWidget_18.setGeometry(QRect(0, 30, 531, 31))
+        self.horizontalLayoutWidget_18.setGeometry(QRect(0, 30, 631, 31))
         self.layout_configuracion_epelsa_3 = QHBoxLayout(self.horizontalLayoutWidget_18)
+        self.layout_configuracion_epelsa_3.setSpacing(0)
         self.layout_configuracion_epelsa_3.setObjectName(u"layout_configuracion_epelsa_3")
         self.layout_configuracion_epelsa_3.setContentsMargins(0, 0, 0, 0)
         self.configuracion_linea_epelsa_3 = QLineEdit(self.horizontalLayoutWidget_18)
         self.configuracion_linea_epelsa_3.setObjectName(u"configuracion_linea_epelsa_3")
-        self.configuracion_linea_epelsa_3.setMaximumSize(QSize(545, 16777215))
+        self.configuracion_linea_epelsa_3.setMinimumSize(QSize(80, 0))
+        self.configuracion_linea_epelsa_3.setMaximumSize(QSize(649, 16777215))
         self.configuracion_linea_epelsa_3.setStyleSheet(u"QLineEdit {\n"
 "	background-color: #1b1e23;\n"
 "	border-radius: 8px;\n"
@@ -771,7 +774,7 @@ class Ui_MainPages(object):
         self.config_label_epelsa_3.setGeometry(QRect(0, 10, 161, 16))
         self.horizontalLayoutWidget_19 = QWidget(self.bascula_epelsa_2)
         self.horizontalLayoutWidget_19.setObjectName(u"horizontalLayoutWidget_19")
-        self.horizontalLayoutWidget_19.setGeometry(QRect(0, 80, 531, 31))
+        self.horizontalLayoutWidget_19.setGeometry(QRect(0, 80, 631, 31))
         self.layout_configuracion_dibal_7 = QHBoxLayout(self.horizontalLayoutWidget_19)
         self.layout_configuracion_dibal_7.setObjectName(u"layout_configuracion_dibal_7")
         self.layout_configuracion_dibal_7.setContentsMargins(0, 0, 0, 0)
@@ -825,13 +828,13 @@ class Ui_MainPages(object):
         self.config_label_ishida_3.setGeometry(QRect(0, 10, 161, 16))
         self.horizontalLayoutWidget_20 = QWidget(self.bascula_ishida_2)
         self.horizontalLayoutWidget_20.setObjectName(u"horizontalLayoutWidget_20")
-        self.horizontalLayoutWidget_20.setGeometry(QRect(0, 30, 531, 31))
+        self.horizontalLayoutWidget_20.setGeometry(QRect(0, 30, 631, 31))
         self.layout_configuracion_epelsa_4 = QHBoxLayout(self.horizontalLayoutWidget_20)
         self.layout_configuracion_epelsa_4.setObjectName(u"layout_configuracion_epelsa_4")
         self.layout_configuracion_epelsa_4.setContentsMargins(0, 0, 0, 0)
         self.configuracion_linea_ishida_3 = QLineEdit(self.horizontalLayoutWidget_20)
         self.configuracion_linea_ishida_3.setObjectName(u"configuracion_linea_ishida_3")
-        self.configuracion_linea_ishida_3.setMaximumSize(QSize(545, 16777215))
+        self.configuracion_linea_ishida_3.setMaximumSize(QSize(630, 16777215))
         self.configuracion_linea_ishida_3.setStyleSheet(u"QLineEdit {\n"
 "	background-color: #1b1e23;\n"
 "	border-radius: 8px;\n"
@@ -851,7 +854,7 @@ class Ui_MainPages(object):
 
         self.horizontalLayoutWidget_21 = QWidget(self.bascula_ishida_2)
         self.horizontalLayoutWidget_21.setObjectName(u"horizontalLayoutWidget_21")
-        self.horizontalLayoutWidget_21.setGeometry(QRect(0, 80, 531, 31))
+        self.horizontalLayoutWidget_21.setGeometry(QRect(0, 80, 631, 31))
         self.layout_configuracion_dibal_8 = QHBoxLayout(self.horizontalLayoutWidget_21)
         self.layout_configuracion_dibal_8.setObjectName(u"layout_configuracion_dibal_8")
         self.layout_configuracion_dibal_8.setContentsMargins(0, 0, 0, 0)
@@ -902,13 +905,13 @@ class Ui_MainPages(object):
         self.bascula_marques_2.setObjectName(u"bascula_marques_2")
         self.horizontalLayoutWidget_22 = QWidget(self.bascula_marques_2)
         self.horizontalLayoutWidget_22.setObjectName(u"horizontalLayoutWidget_22")
-        self.horizontalLayoutWidget_22.setGeometry(QRect(0, 30, 531, 31))
+        self.horizontalLayoutWidget_22.setGeometry(QRect(0, 30, 631, 31))
         self.layout_configuracion_marques_3 = QHBoxLayout(self.horizontalLayoutWidget_22)
         self.layout_configuracion_marques_3.setObjectName(u"layout_configuracion_marques_3")
         self.layout_configuracion_marques_3.setContentsMargins(0, 0, 0, 0)
         self.configuracion_linea_marques_2 = QLineEdit(self.horizontalLayoutWidget_22)
         self.configuracion_linea_marques_2.setObjectName(u"configuracion_linea_marques_2")
-        self.configuracion_linea_marques_2.setMaximumSize(QSize(545, 16777215))
+        self.configuracion_linea_marques_2.setMaximumSize(QSize(637, 16777215))
         self.configuracion_linea_marques_2.setStyleSheet(u"QLineEdit {\n"
 "	background-color: #1b1e23;\n"
 "	border-radius: 8px;\n"
@@ -931,7 +934,7 @@ class Ui_MainPages(object):
         self.config_label_marques_2.setGeometry(QRect(0, 10, 241, 16))
         self.horizontalLayoutWidget_23 = QWidget(self.bascula_marques_2)
         self.horizontalLayoutWidget_23.setObjectName(u"horizontalLayoutWidget_23")
-        self.horizontalLayoutWidget_23.setGeometry(QRect(30, 70, 491, 41))
+        self.horizontalLayoutWidget_23.setGeometry(QRect(30, 70, 601, 41))
         self.layout_configuracion_marques_4 = QHBoxLayout(self.horizontalLayoutWidget_23)
         self.layout_configuracion_marques_4.setObjectName(u"layout_configuracion_marques_4")
         self.layout_configuracion_marques_4.setContentsMargins(0, 0, 0, 0)
@@ -1195,7 +1198,7 @@ class Ui_MainPages(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 822, 499))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 98, 28))
         self.verticalLayoutWidget = QWidget(self.scrollAreaWidgetContents_3)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
         self.verticalLayoutWidget.setGeometry(QRect(300, 50, 160, 80))
@@ -1230,7 +1233,7 @@ class Ui_MainPages(object):
 
         self.pages.setCurrentIndex(4)
         self.configuraciones_basculas_2.setCurrentIndex(1)
-        self.configuraciones_basculas.setCurrentIndex(0)
+        self.configuraciones_basculas.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainPages)
