@@ -9,7 +9,7 @@ try:
             )
         datos_empresa= cursor.fetchall()
         for empresa in datos_empresa:
-            print("Datos de empresa")
+            print("Datos de empresa cargados correctamente")
         
         #Datos Empleados
         cursor.execute("SELECT name, email, role FROM dbo.users;")
@@ -22,14 +22,20 @@ try:
         cursor.execute("SELECT id,nombre FROM dbo.gen_departamentos;")
         datos_departamento=cursor.fetchall()
         departamentos=[]
+        departamentos_id=[]
         for departamento in datos_departamento:
-            departamentos.append(departamento.nombre)    
+            departamentos.append(departamento.nombre)
+            departamentos_id.append(departamento.id)
+        # print(departamentos_id)
+        
         #Datos Municipios de acuerdo al departamento
         cursor.execute("SELECT id,nombre,departamento_id FROM dbo.gen_municipios;")
         datos_municipo=cursor.fetchall()
         municipios=[]
         for municipio in datos_municipo:
             municipios.append(municipio.nombre)
+            municipios.append(municipio.id)
+        # print(municipios)
             
         #Datos terceros
         cursor.execute("SELECT id,nombre FROM dbo.terceros;")
@@ -61,9 +67,19 @@ try:
             secciones.append(seccion.secciones_dibal)
         #Licencia por defecto
         #Cantidad de caracteres por defecto =48
-            
-            
+        
+        # Ensayo de editar 
+        def update(datosEmpresa_nombre):
+                try:
+                    with conexion.cursor() as cursor:
+                        consulta = "update dbo.gen_empresa set nombre = ? WHERE  id = ?;"
+                        id = 1
+                        cursor.execute(consulta,(datosEmpresa_nombre, id))
+                        conexion.commit()
+                except Exception as e:
+                    print("Ocurrió un error al editar: ", e)
+
 except Exception as e:
     print("Ocurrio un error al consultar: ",e)
-finally:
-    conexion.close()
+# finally:
+    # conexion.close()

@@ -21,6 +21,9 @@ os.environ["QT_FONT_DPI"] = "96"
 # IF IS 4K MONITOR ENABLE 'os.environ["QT_SCALE_FACTOR"] = "2"'
 #contador para la barra circular
 contador=0
+# Base De Datos
+from base_de_datos.db import conexion
+from base_de_datos.consulta import *
 # MAIN WINDOW
 # //////////////////////////////////////////////////////////////
 class MainWindow(QMainWindow):
@@ -159,11 +162,21 @@ class MainWindow(QMainWindow):
         print(f"Button {btn.objectName()}, clicked!")
     
     #Señal de departamento 
-    def departamento_municipio(self,departamento):
-        print("cambiaste de departamento", departamento)
-    
-        
+    def departamento_municipio(self,departamentos_id):
+        print("cambiaste de departamento", departamentos)
+  
+    # Señal campo nombre
+    def empresa_nombre(self,datosEmpresa_nombre):
+        update(datosEmpresa_nombre)
+        print("has cambiado el nombre a =", datosEmpresa_nombre)
+        return datosEmpresa_nombre
+            
+    #Señal Boton de guardar edicion
+    def boton_guardar_edicion(self):
+        print("Datos Actualizados")
+        return(self.empresa_nombre())
 
+       
     # LEFT MENU BTN IS RELEASED
     # Run function when btn is released
     # Check funtion by object name / btn_id
@@ -244,6 +257,7 @@ class SplashScreen(QMainWindow):
         contador +=1
         
         #aca termina codigo circular
+        
 
 if __name__ == "__main__":
     # APPLICATION

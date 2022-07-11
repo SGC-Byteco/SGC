@@ -256,7 +256,7 @@ class Ui_MainPages(object):
 "    padding-right: 10px;\n"
 "	selection-color: #f5f6f9;\n"
 "	selection-background-color: #568af2;\n"
-"    color: #8a95aa;\n"
+"	color: white;\n"
 "}\n"
 "QLineEdit:focus {\n"
 "	border: 2px solid #568af2;\n"
@@ -275,7 +275,7 @@ class Ui_MainPages(object):
 "    padding-right: 10px;\n"
 "	selection-color: #f5f6f9;\n"
 "	selection-background-color: #568af2;\n"
-"    color: #8a95aa;\n"
+"    color: white;\n"
 "}\n"
 "QLineEdit:focus {\n"
 "	border: 2px solid #568af2;\n"
@@ -294,7 +294,7 @@ class Ui_MainPages(object):
 "    padding-right: 10px;\n"
 "	selection-color: #f5f6f9;\n"
 "	selection-background-color: #568af2;\n"
-"    color: #8a95aa;\n"
+"    color: white;\n"
 "}\n"
 "QLineEdit:focus {\n"
 "	border: 2px solid #568af2;\n"
@@ -934,7 +934,7 @@ class Ui_MainPages(object):
         self.config_label_marques_2.setGeometry(QRect(0, 10, 241, 16))
         self.horizontalLayoutWidget_23 = QWidget(self.bascula_marques_2)
         self.horizontalLayoutWidget_23.setObjectName(u"horizontalLayoutWidget_23")
-        self.horizontalLayoutWidget_23.setGeometry(QRect(30, 70, 601, 41))
+        self.horizontalLayoutWidget_23.setGeometry(QRect(0, 70, 631, 41))
         self.layout_configuracion_marques_4 = QHBoxLayout(self.horizontalLayoutWidget_23)
         self.layout_configuracion_marques_4.setObjectName(u"layout_configuracion_marques_4")
         self.layout_configuracion_marques_4.setContentsMargins(0, 0, 0, 0)
@@ -1004,13 +1004,13 @@ class Ui_MainPages(object):
         self.facturacion_electronica.setObjectName(u"facturacion_electronica")
         self.configuracion_label_factura_token = QLabel(self.facturacion_electronica)
         self.configuracion_label_factura_token.setObjectName(u"configuracion_label_factura_token")
-        self.configuracion_label_factura_token.setGeometry(QRect(0, 0, 161, 16))
+        self.configuracion_label_factura_token.setGeometry(QRect(30, 0, 161, 16))
         self.horizontalLayoutWidget_13 = QWidget(self.facturacion_electronica)
         self.horizontalLayoutWidget_13.setObjectName(u"horizontalLayoutWidget_13")
         self.horizontalLayoutWidget_13.setGeometry(QRect(0, 20, 831, 31))
         self.layout_configuracion_factura = QHBoxLayout(self.horizontalLayoutWidget_13)
         self.layout_configuracion_factura.setObjectName(u"layout_configuracion_factura")
-        self.layout_configuracion_factura.setContentsMargins(0, 0, 0, 0)
+        self.layout_configuracion_factura.setContentsMargins(20, 0, 20, 0)
         self.configuracion_linea_factura_token = QLineEdit(self.horizontalLayoutWidget_13)
         self.configuracion_linea_factura_token.setObjectName(u"configuracion_linea_factura_token")
         self.configuracion_linea_factura_token.setStyleSheet(u"QLineEdit {\n"
@@ -1032,6 +1032,7 @@ class Ui_MainPages(object):
 
         self.configuracion_linea_factura_Dian = QLineEdit(self.horizontalLayoutWidget_13)
         self.configuracion_linea_factura_Dian.setObjectName(u"configuracion_linea_factura_Dian")
+        self.configuracion_linea_factura_Dian.setMaximumSize(QSize(409, 16777215))
         self.configuracion_linea_factura_Dian.setStyleSheet(u"QLineEdit {\n"
 "	background-color: #1b1e23;\n"
 "	border-radius: 8px;\n"
@@ -1057,7 +1058,7 @@ class Ui_MainPages(object):
         self.horizontalLayoutWidget_14.setGeometry(QRect(0, 70, 831, 31))
         self.layout_configuracion_factura_2 = QHBoxLayout(self.horizontalLayoutWidget_14)
         self.layout_configuracion_factura_2.setObjectName(u"layout_configuracion_factura_2")
-        self.layout_configuracion_factura_2.setContentsMargins(0, 0, 0, 0)
+        self.layout_configuracion_factura_2.setContentsMargins(20, 0, 20, 0)
         self.configuracion_linea_factura_impuesto_bolsa = QComboBox(self.horizontalLayoutWidget_14)
         self.configuracion_linea_factura_impuesto_bolsa.setObjectName(u"configuracion_linea_factura_impuesto_bolsa")
         self.configuracion_linea_factura_impuesto_bolsa.setStyleSheet(u"border: none;\n"
@@ -1098,13 +1099,13 @@ class Ui_MainPages(object):
 
         self.configuracion_label_factura_token_3 = QLabel(self.facturacion_electronica)
         self.configuracion_label_factura_token_3.setObjectName(u"configuracion_label_factura_token_3")
-        self.configuracion_label_factura_token_3.setGeometry(QRect(0, 50, 161, 16))
+        self.configuracion_label_factura_token_3.setGeometry(QRect(30, 50, 161, 16))
         self.configuracion_label_factura_token_5 = QLabel(self.facturacion_electronica)
         self.configuracion_label_factura_token_5.setObjectName(u"configuracion_label_factura_token_5")
         self.configuracion_label_factura_token_5.setGeometry(QRect(210, 50, 161, 16))
         self.configuracion_label_factura_token_4 = QLabel(self.facturacion_electronica)
         self.configuracion_label_factura_token_4.setObjectName(u"configuracion_label_factura_token_4")
-        self.configuracion_label_factura_token_4.setGeometry(QRect(420, 50, 161, 16))
+        self.configuracion_label_factura_token_4.setGeometry(QRect(410, 50, 161, 16))
         self.configuraciones_basculas_2.addTab(self.facturacion_electronica, "")
 
         self.verticalLayout_6.addWidget(self.configuraciones_basculas_2)
@@ -1198,7 +1199,7 @@ class Ui_MainPages(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 98, 28))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 63, 16))
         self.verticalLayoutWidget = QWidget(self.scrollAreaWidgetContents_3)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
         self.verticalLayoutWidget.setGeometry(QRect(300, 50, 160, 80))
@@ -1232,8 +1233,8 @@ class Ui_MainPages(object):
         self.retranslateUi(MainPages)
 
         self.pages.setCurrentIndex(4)
-        self.configuraciones_basculas_2.setCurrentIndex(1)
-        self.configuraciones_basculas.setCurrentIndex(3)
+        self.configuraciones_basculas_2.setCurrentIndex(0)
+        self.configuraciones_basculas.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainPages)

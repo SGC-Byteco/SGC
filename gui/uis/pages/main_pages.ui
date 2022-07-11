@@ -461,7 +461,7 @@ I will try to always record a new tutorial when adding a new Widget and updating
     padding-right: 10px;
 	selection-color: #f5f6f9;
 	selection-background-color: #568af2;
-    color: #8a95aa;
+	color: white;
 }
 QLineEdit:focus {
 	border: 2px solid #568af2;
@@ -481,7 +481,7 @@ QLineEdit:focus {
     padding-right: 10px;
 	selection-color: #f5f6f9;
 	selection-background-color: #568af2;
-    color: #8a95aa;
+    color: white;
 }
 QLineEdit:focus {
 	border: 2px solid #568af2;
@@ -501,7 +501,7 @@ QLineEdit:focus {
     padding-right: 10px;
 	selection-color: #f5f6f9;
 	selection-background-color: #568af2;
-    color: #8a95aa;
+    color: white;
 }
 QLineEdit:focus {
 	border: 2px solid #568af2;
@@ -973,7 +973,7 @@ QTabBar::tab:!selected {
 </string>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="tab">
               <attribute name="title">
@@ -1056,7 +1056,7 @@ QLineEdit:focus {
                   <string notr="true"/>
                  </property>
                  <property name="currentIndex">
-                  <number>3</number>
+                  <number>0</number>
                  </property>
                  <widget class="QWidget" name="bascula_Dibal_2">
                   <attribute name="title">
@@ -1544,9 +1544,9 @@ QLineEdit:focus {
                   <widget class="QWidget" name="horizontalLayoutWidget_23">
                    <property name="geometry">
                     <rect>
-                     <x>30</x>
+                     <x>0</x>
                      <y>70</y>
-                     <width>601</width>
+                     <width>631</width>
                      <height>41</height>
                     </rect>
                    </property>
@@ -1634,7 +1634,7 @@ QPushButton:pressed {
               <widget class="QLabel" name="configuracion_label_factura_token">
                <property name="geometry">
                 <rect>
-                 <x>0</x>
+                 <x>30</x>
                  <y>0</y>
                  <width>161</width>
                  <height>16</height>
@@ -1654,6 +1654,12 @@ QPushButton:pressed {
                 </rect>
                </property>
                <layout class="QHBoxLayout" name="layout_configuracion_factura">
+                <property name="leftMargin">
+                 <number>20</number>
+                </property>
+                <property name="rightMargin">
+                 <number>20</number>
+                </property>
                 <item>
                  <widget class="QLineEdit" name="configuracion_linea_factura_token">
                   <property name="styleSheet">
@@ -1676,6 +1682,12 @@ QLineEdit:focus {
                 </item>
                 <item>
                  <widget class="QLineEdit" name="configuracion_linea_factura_Dian">
+                  <property name="maximumSize">
+                   <size>
+                    <width>409</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">QLineEdit {
 	background-color: #1b1e23;
@@ -1719,6 +1731,12 @@ QLineEdit:focus {
                 </rect>
                </property>
                <layout class="QHBoxLayout" name="layout_configuracion_factura_2">
+                <property name="leftMargin">
+                 <number>20</number>
+                </property>
+                <property name="rightMargin">
+                 <number>20</number>
+                </property>
                 <item>
                  <widget class="QComboBox" name="configuracion_linea_factura_impuesto_bolsa">
                   <property name="styleSheet">
@@ -1770,7 +1788,7 @@ QLineEdit:focus {
               <widget class="QLabel" name="configuracion_label_factura_token_3">
                <property name="geometry">
                 <rect>
-                 <x>0</x>
+                 <x>30</x>
                  <y>50</y>
                  <width>161</width>
                  <height>16</height>
@@ -1796,7 +1814,7 @@ QLineEdit:focus {
               <widget class="QLabel" name="configuracion_label_factura_token_4">
                <property name="geometry">
                 <rect>
-                 <x>420</x>
+                 <x>410</x>
                  <y>50</y>
                  <width>161</width>
                  <height>16</height>
@@ -1926,8 +1944,8 @@ QPushButton:pressed {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>28</height>
+            <width>63</width>
+            <height>16</height>
            </rect>
           </property>
           <widget class="QWidget" name="verticalLayoutWidget">

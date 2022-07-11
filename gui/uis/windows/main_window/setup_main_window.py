@@ -544,6 +544,10 @@ class SetupMainWindow:
     # /////////////////////////////////////////////////////////////////////////////////////////
         #PAGINA 5
         self.ui.load_pages.datosEmpresa_nombre.setText(empresa.nombre)
+        # Señal 
+        self.ui.load_pages.datosEmpresa_nombre.textChanged.connect(self.empresa_nombre)
+    
+        
         self.ui.load_pages.datosEmpresa_razon_social.setText(empresa.razon_social)
         self.ui.load_pages.datosEmpresa_direccion.setText(empresa.direccion)
         self.ui.load_pages.datosEmpresa_telefono.setText(empresa.telefono)
@@ -551,8 +555,7 @@ class SetupMainWindow:
         self.ui.load_pages.datosEmpresa_nit.setText(empresa.nit)
         
         self.ui.load_pages.datosEmpresa_departamento.addItems(departamentos)
-        if departamento.id == municipio.departamento_id:
-            self.ui.load_pages.datosEmpresa_municipio.addItems(municipios)
+        self.ui.load_pages.datosEmpresa_municipio.addItems(municipios)
         #Señal de cambio de departamento
         self.ui.load_pages.datosEmpresa_departamento.currentTextChanged.connect(self.departamento_municipio)
     
@@ -590,6 +593,9 @@ class SetupMainWindow:
         self.ui.load_pages.configuracion_linea_factura_impuesto_bolsa.addItems([str(empresa.producto_bolsa_id)])
         self.ui.load_pages.configuracion_linea_factura_Impuesto_excluido.addItems([str(empresa.gen_iva_excluido_id)])
         self.ui.load_pages.configuracion_linea_factura_email.setText(empresa.email_backup_fact_elect)
+        
+        # Boton guardar edicion
+        self.ui.load_pages.configuracion_boton_factura_guardar.clicked.connect(self.boton_guardar_edicion)
         
         #////////////////////////////////////////////////////////
         # ADD WIDGETS
