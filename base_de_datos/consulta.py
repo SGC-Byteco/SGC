@@ -67,17 +67,20 @@ try:
             secciones.append(seccion.secciones_dibal)
         #Licencia por defecto
         #Cantidad de caracteres por defecto =48
-        
+    
         # Ensayo de editar 
-        def update(datosEmpresa_nombre):
+        def update(valor,nuevo_nombre):
+            if valor==True:
                 try:
                     with conexion.cursor() as cursor:
                         consulta = "update dbo.gen_empresa set nombre = ? WHERE  id = ?;"
                         id = 1
-                        cursor.execute(consulta,(datosEmpresa_nombre, id))
+                        cursor.execute(consulta,(nuevo_nombre, id))
                         conexion.commit()
                 except Exception as e:
                     print("Ocurrió un error al editar: ", e)
+            else:
+                print("Los datos no fueron actualizados")        
 
 except Exception as e:
     print("Ocurrio un error al consultar: ",e)

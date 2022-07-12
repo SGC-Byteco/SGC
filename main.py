@@ -161,20 +161,13 @@ class MainWindow(QMainWindow):
         # DEBUG
         print(f"Button {btn.objectName()}, clicked!")
     
-    #Señal de departamento 
-    def departamento_municipio(self,departamentos_id):
-        print("cambiaste de departamento", departamentos)
-  
-    # Señal campo nombre
-    def empresa_nombre(self,datosEmpresa_nombre):
-        update(datosEmpresa_nombre)
-        print("has cambiado el nombre a =", datosEmpresa_nombre)
-        return datosEmpresa_nombre
-            
+    # ////////////////////////////////// Señales pagina5//////////////////////////
+
     #Señal Boton de guardar edicion
     def boton_guardar_edicion(self):
+        self.datosEmpresa_nombre= self.ui.load_pages.datosEmpresa_nombre.text()
+        update(True, self.datosEmpresa_nombre)
         print("Datos Actualizados")
-        return(self.empresa_nombre())
 
        
     # LEFT MENU BTN IS RELEASED
