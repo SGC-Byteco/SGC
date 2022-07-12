@@ -162,12 +162,33 @@ class MainWindow(QMainWindow):
         print(f"Button {btn.objectName()}, clicked!")
     
     # ////////////////////////////////// Señales pagina5//////////////////////////
+    # def indice_cambiado(self,indice):
+    #     print("El indice del departamento es ",indice)
+    # def texto_cambiado(self,texto):
+    #     print("El texto corresponde a",texto)
+
 
     #Señal Boton de guardar edicion
     def boton_guardar_edicion(self):
+        print("Validacion de datos")
         self.datosEmpresa_nombre= self.ui.load_pages.datosEmpresa_nombre.text()
-        update(True, self.datosEmpresa_nombre)
-        print("Datos Actualizados")
+        self.datosEmpresa_razon_social= self.ui.load_pages.datosEmpresa_razon_social.text()
+        self.datosEmpresa_direccion= self.ui.load_pages.datosEmpresa_direccion.text()
+        
+        self.datosEmpresa_telefono= self.ui.load_pages.datosEmpresa_telefono.text()
+        self.datosEmpresa_tipo_regimen =self.ui.load_pages.datosEmpresa_tipo_regimen.text()
+        self.datosEmpresa_nit= self.ui.load_pages.datosEmpresa_nit.text()
+        
+        # Datos departamentos y municipios
+        self.datosEmpresa_departamento= self.ui.load_pages.datosEmpresa_departamento.currentText()
+        self.datosEmpresa_departamento_1= self.ui.load_pages.datosEmpresa_departamento.currentIndex()+1
+        self.datosEmpresa_departamento_2=self.ui.load_pages.datosEmpresa_departamento.itemText(self.datosEmpresa_departamento_1)
+        print("Departamento",self.datosEmpresa_departamento+" "+"Indice",self.datosEmpresa_departamento_1+" "+"Indice recuperado",self.datosEmpresa_departamento_2)
+        # Funcion update para la validacion de datos en la DB
+        update(True, self.datosEmpresa_nombre,self.datosEmpresa_razon_social,self.datosEmpresa_direccion,
+               self.datosEmpresa_telefono,self.datosEmpresa_tipo_regimen,self.datosEmpresa_nit,
+               self.datosEmpresa_departamento)
+
 
        
     # LEFT MENU BTN IS RELEASED

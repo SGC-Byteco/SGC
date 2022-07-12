@@ -544,22 +544,21 @@ class SetupMainWindow:
     # /////////////////////////////////////////////////////////////////////////////////////////
         #PAGINA 5
         self.ui.load_pages.datosEmpresa_nombre.setText(empresa.nombre)
-        # Señal 
-        self.ui.load_pages.datosEmpresa_nombre.textChanged.connect(self.empresa_nombre)
-    
-        
         self.ui.load_pages.datosEmpresa_razon_social.setText(empresa.razon_social)
         self.ui.load_pages.datosEmpresa_direccion.setText(empresa.direccion)
+        
         self.ui.load_pages.datosEmpresa_telefono.setText(empresa.telefono)
         self.ui.load_pages.datosEmpresa_tipo_regimen.setText(empresa.direccion)
         self.ui.load_pages.datosEmpresa_nit.setText(empresa.nit)
         
         self.ui.load_pages.datosEmpresa_departamento.addItems(departamentos)
         self.ui.load_pages.datosEmpresa_municipio.addItems(municipios)
-        #Señal de cambio de departamento
-        self.ui.load_pages.datosEmpresa_departamento.currentTextChanged.connect(self.departamento_municipio)
-    
         
+        
+        # Señales
+        # self.ui.load_pages.datosEmpresa_departamento.currentIndexChanged.connect(self.indice_cambiado)
+        # self.ui.load_pages.datosEmpresa_departamento.currentTextChanged.connect(self.texto_cambiado)
+
         self.ui.load_pages.datosEmpresa_tercero.addItems(terceros)
         self.ui.load_pages.datosEmpresa_sucursal.addItems(sucursales)
         self.ui.load_pages.datosEmpresa_lista_precios.addItems(lista_precios)

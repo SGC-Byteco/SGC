@@ -36,6 +36,15 @@ try:
             municipios.append(municipio.nombre)
             municipios.append(municipio.id)
         # print(municipios)
+        
+        # Inner JOIN DEPARTAMENTO MUNICIPIO
+        cursor.execute("SELECT M.id,M.nombre,departamento_id,D.nombre FROM dbo.gen_municipios M INNER JOIN dbo.gen_departamentos D on M.departamento_id=D.id")
+        datos_D_M=cursor.fetchall()
+        de_mu=[]
+        for d_m in datos_D_M:
+            de_mu.append(d_m)      
+        
+        
             
         #Datos terceros
         cursor.execute("SELECT id,nombre FROM dbo.terceros;")
@@ -69,14 +78,24 @@ try:
         #Cantidad de caracteres por defecto =48
     
         # Ensayo de editar 
-        def update(valor,nuevo_nombre):
+        def update(valor,nombre,razon_social,direccion,
+                   telefono,tipo_regimen,nit,departamento):
             if valor==True:
                 try:
                     with conexion.cursor() as cursor:
-                        consulta = "update dbo.gen_empresa set nombre = ? WHERE  id = ?;"
+                        # Datos Principales
+                        consulta_empresa_1= "update dbo.gen_empresa set nombre=?,razon_social=?,direccion=?,"
+                        consulta_empresa_2="telefono=?,tipo_regimen=?,nit=? WHERE id = ?;"
+                        consulta_empresa=consulta_empresa_1+consulta_empresa_2
                         id = 1
-                        cursor.execute(consulta,(nuevo_nombre, id))
+                        cursor.execute(consulta_empresa,(nombre, razon_social,direccion,telefono,tipo_regimen,nit, id))
+                        # Datos Departamento
+                        # consulta_departamento="update dbo.departamentos set nombre=? WHERE *;"
+                        # cursor.execute(consulta_departamento,(departamento))
+                        
+                        
                         conexion.commit()
+                        print("Datos Cambiados Correctamente")
                 except Exception as e:
                     print("Ocurrió un error al editar: ", e)
             else:
