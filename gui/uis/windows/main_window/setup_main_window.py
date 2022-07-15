@@ -556,7 +556,7 @@ class SetupMainWindow:
         
         
         # Señales
-        # self.ui.load_pages.datosEmpresa_departamento.currentIndexChanged.connect(self.indice_cambiado)
+        self.indice=self.ui.load_pages.datosEmpresa_departamento.currentIndexChanged.connect(self.departamento_municipio)
         # self.ui.load_pages.datosEmpresa_departamento.currentTextChanged.connect(self.texto_cambiado)
 
         self.ui.load_pages.datosEmpresa_tercero.addItems(terceros)

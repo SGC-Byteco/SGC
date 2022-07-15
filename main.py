@@ -39,6 +39,12 @@ class MainWindow(QMainWindow):
         self.hide_grips = True # Show/Hide resize grips
         SetupMainWindow.setup_gui(self) 
         
+        # Placeholder de la pagina empresa
+        self.ui.load_pages.datosEmpresa_departamento.setPlaceholderText(defecto_departamento)
+        self.ui.load_pages.datosEmpresa_departamento.setCurrentIndex(-1)
+        self.ui.load_pages.datosEmpresa_municipio.setPlaceholderText(defecto_municipio)
+        self.ui.load_pages.datosEmpresa_municipio.setCurrentIndex(-1)
+        
     def change_value(self, value):
         self.progress.set_value(value)
     def btn_clicked(self):
@@ -166,28 +172,41 @@ class MainWindow(QMainWindow):
     #     print("El indice del departamento es ",indice)
     # def texto_cambiado(self,texto):
     #     print("El texto corresponde a",texto)
-
-
-    #Señal Boton de guardar edicion
+    def departamento_municipio(self,indice):
+        muni=[]
+        index=indice+1
+        for i in de_mu:
+            if index==i[2]:
+                muni.append(i[1])
+        self.ui.load_pages.datosEmpresa_municipio.clear()
+        self.ui.load_pages.datosEmpresa_municipio.addItems(muni)
+        self.ui.load_pages.datosEmpresa_municipio.setPlaceholderText("")
+        
+    # Boton de guardar edicion
     def boton_guardar_edicion(self):
         print("Validacion de datos")
+        
+        # Datos Nombre
         self.datosEmpresa_nombre= self.ui.load_pages.datosEmpresa_nombre.text()
         self.datosEmpresa_razon_social= self.ui.load_pages.datosEmpresa_razon_social.text()
         self.datosEmpresa_direccion= self.ui.load_pages.datosEmpresa_direccion.text()
         
+        # Datos Empresa
         self.datosEmpresa_telefono= self.ui.load_pages.datosEmpresa_telefono.text()
         self.datosEmpresa_tipo_regimen =self.ui.load_pages.datosEmpresa_tipo_regimen.text()
         self.datosEmpresa_nit= self.ui.load_pages.datosEmpresa_nit.text()
         
         # Datos departamentos y municipios
         self.datosEmpresa_departamento= self.ui.load_pages.datosEmpresa_departamento.currentText()
-        self.datosEmpresa_departamento_1= self.ui.load_pages.datosEmpresa_departamento.currentIndex()+1
+        self.datosEmpresa_departamento_1= self.ui.load_pages.datosEmpresa_departamento.currentIndex()
         self.datosEmpresa_departamento_2=self.ui.load_pages.datosEmpresa_departamento.itemText(self.datosEmpresa_departamento_1)
-        print("Departamento",self.datosEmpresa_departamento+" "+"Indice",self.datosEmpresa_departamento_1+" "+"Indice recuperado",self.datosEmpresa_departamento_2)
-        # Funcion update para la validacion de datos en la DB
-        update(True, self.datosEmpresa_nombre,self.datosEmpresa_razon_social,self.datosEmpresa_direccion,
+        self.datosEmpresa_municipio= self.ui.load_pages.datosEmpresa_municipio.currentText()
+                
+        print("Departamento",self.datosEmpresa_departamento +" "+"Municipio",self.datosEmpresa_municipio)
+        
+        boton_guardar(True, self.datosEmpresa_nombre,self.datosEmpresa_razon_social,self.datosEmpresa_direccion,
                self.datosEmpresa_telefono,self.datosEmpresa_tipo_regimen,self.datosEmpresa_nit,
-               self.datosEmpresa_departamento)
+               self.datosEmpresa_departamento, self.datosEmpresa_municipio)
 
 
        

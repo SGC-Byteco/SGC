@@ -1,6 +1,8 @@
 from base_de_datos.db import conexion
 # from db import conexion
 
+import numpy as np
+
 try:
     with conexion.cursor() as cursor:
         #Datos de la Empresa
@@ -34,18 +36,17 @@ try:
         municipios=[]
         for municipio in datos_municipo:
             municipios.append(municipio.nombre)
-            municipios.append(municipio.id)
+            # municipios.append(municipio.id)
         # print(municipios)
         
         # Inner JOIN DEPARTAMENTO MUNICIPIO
-        cursor.execute("SELECT M.id,M.nombre,departamento_id,D.nombre FROM dbo.gen_municipios M INNER JOIN dbo.gen_departamentos D on M.departamento_id=D.id")
+        cursor.execute("SELECT M.id,M.nombre,departamento_id,D.nombre as depar FROM dbo.gen_municipios M INNER JOIN dbo.gen_departamentos D on M.departamento_id=D.id")
         datos_D_M=cursor.fetchall()
         de_mu=[]
         for d_m in datos_D_M:
-            de_mu.append(d_m)      
+            de_mu.append(d_m)
+        # print(de_mu)     
         
-        
-            
         #Datos terceros
         cursor.execute("SELECT id,nombre FROM dbo.terceros;")
         datos_terceros=cursor.fetchall()
@@ -78,9 +79,22 @@ try:
         #Cantidad de caracteres por defecto =48
     
         # Ensayo de editar 
-        def update(valor,nombre,razon_social,direccion,
-                   telefono,tipo_regimen,nit,departamento):
+        def boton_guardar(valor,nombre,razon_social,direccion,
+                   telefono,tipo_regimen,nit,departamento,municipio):
             if valor==True:
+                # Carga de archivo txt por defecto
+                new=np.array(departamento)
+                new2=np.array(municipio)
+                archivo=open("base_de_datos/defecto_empresa.txt","w")
+                contenido=str(new)
+                contenido2=str(new2)
+                archivo.write(contenido + '\n' )
+                archivo.write(contenido2)
+                archivo.close()
+                
+                
+                
+                #Carga de valores de campos de texto en la base da datos 
                 try:
                     with conexion.cursor() as cursor:
                         # Datos Principales
@@ -88,18 +102,19 @@ try:
                         consulta_empresa_2="telefono=?,tipo_regimen=?,nit=? WHERE id = ?;"
                         consulta_empresa=consulta_empresa_1+consulta_empresa_2
                         id = 1
-                        cursor.execute(consulta_empresa,(nombre, razon_social,direccion,telefono,tipo_regimen,nit, id))
-                        # Datos Departamento
-                        # consulta_departamento="update dbo.departamentos set nombre=? WHERE *;"
-                        # cursor.execute(consulta_departamento,(departamento))
-                        
-                        
+                        cursor.execute(consulta_empresa,(nombre, razon_social,direccion,telefono,tipo_regimen,nit, id))                        
                         conexion.commit()
                         print("Datos Cambiados Correctamente")
                 except Exception as e:
-                    print("Ocurrió un error al editar: ", e)
+                    print("Ocurrió un error al editar: ", e)  
             else:
-                print("Los datos no fueron actualizados")        
+                print("Los datos no fueron actualizados")
+        with open("base_de_datos/defecto_empresa.txt") as archivo_defecto:
+            lineas= archivo_defecto.readlines()
+            lineas= list(map(lambda l: l.rstrip('\n'),lineas))
+            defecto_departamento=lineas[0]
+            defecto_municipio=lineas[1]
+                 
 
 except Exception as e:
     print("Ocurrio un error al consultar: ",e)
