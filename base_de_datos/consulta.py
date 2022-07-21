@@ -83,7 +83,8 @@ try:
                    telefono,tipo_regimen,nit,departamento,municipio,
                    tercero,sucursal,lista_precios,tipo_escaner,licencia,
                    impresora_pos,ruta_dibal,secciones,archivo_dibal,ruta_epelsa,
-                   ruta_precio_epelsa,ruta_ishida,ruta_productos_ishida,ruta_ip_marques):
+                   ruta_precio_epelsa,ruta_ishida,ruta_productos_ishida,ruta_ip_marques,
+                   facturacion_token,facturacion_dian,impuesto_bolsa,impuesto_excluido,email):
             if estado==True:
                 # Carga de archivo txt por defecto
                 defecto_departamento=np.array(departamento)
@@ -93,6 +94,8 @@ try:
                 defecto_lista_de_precios=np.array(lista_precios)
                 defecto_tipo_de_escaner=np.array(tipo_escaner)
                 defecto_secciones=np.array(secciones)
+                defecto_impuesto_bolsa=np.array(impuesto_bolsa)
+                defecto_impuesto_excluido=np.array(impuesto_excluido)
                 
                 archivo=open("base_de_datos/defecto_empresa.txt","w")
                 defec_departamento=str(defecto_departamento)
@@ -102,6 +105,8 @@ try:
                 defec_lista_de_precios=str(defecto_lista_de_precios)
                 defec_tipo_de_escaner=str(defecto_tipo_de_escaner)
                 defec_secciones=str(defecto_secciones)
+                defec_imp_bolsa=str(defecto_impuesto_bolsa)
+                defec_imp_excluido=str(defecto_impuesto_excluido)
                 
                 archivo.write(defec_departamento)
                 archivo.write('\n')
@@ -116,8 +121,11 @@ try:
                 archivo.write(defec_tipo_de_escaner)
                 archivo.write('\n')
                 archivo.write(defec_secciones)
+                archivo.write('\n')
+                archivo.write(defec_imp_bolsa)
+                archivo.write('\n')
+                archivo.write(defec_imp_excluido)
                 archivo.close()
-                
                 #Carga de valores de campos de texto en la base da datos 
                 try:
                     with conexion.cursor() as cursor:
@@ -125,12 +133,14 @@ try:
                         consulta_empresa_1= "update dbo.gen_empresa set nombre=?,razon_social=?,direccion=?,"
                         consulta_empresa_2="telefono=?,tipo_regimen=?,nit=?,licencia=?,cantidad_caracteres=?,"
                         consulta_empresa_3="ruta_archivo_tiquetes_dibal=?,ruta_archivo_tx_dival=?,ruta_archivo_tiquetes_epelsa=?,"
-                        consulta_empresa_4="ruta_archivo_precios_epelsa=?,ruta_archivo_txt_ishida=?,ruta_archivo_tiquetes_ishida=?,ruta_ip_marques WHERE id = ?;"
-                        consulta_empresa=consulta_empresa_1+consulta_empresa_2+consulta_empresa_3+consulta_empresa_4
+                        consulta_empresa_4="ruta_archivo_precios_epelsa=?,ruta_archivo_txt_ishida=?,ruta_archivo_tiquetes_ishida=?,ruta_ip_marques=?,"
+                        consulta_empresa_5="token_fac_elect=?,test_id_fe=?,email_backup_fact_elect=? WHERE id = ?;"
+                        consulta_empresa=consulta_empresa_1+consulta_empresa_2+consulta_empresa_3+consulta_empresa_4+consulta_empresa_5
                         id = 1
                         cursor.execute(consulta_empresa,(nombre,razon_social,direccion,telefono,tipo_regimen,nit,licencia, 
                                                          impresora_pos,ruta_dibal,archivo_dibal,ruta_epelsa,ruta_precio_epelsa,
-                                                         ruta_ishida,ruta_productos_ishida,ruta_ip_marques,id))                        
+                                                         ruta_ishida,ruta_productos_ishida,ruta_ip_marques,facturacion_token,facturacion_dian,
+                                                         email,id))                        
                         conexion.commit()
                         print("Datos Cambiados Correctamente")
                 except Exception as e:
@@ -148,6 +158,8 @@ try:
             defecto_lista_de_precios=lineas[4]
             defecto_tipo_de_escaner=lineas[5]
             defecto_secciones=lineas[6]
+            defecto_impuesto_bolsa=lineas[7]
+            defecto_impuesto_excluido=lineas[8]
 
 except Exception as e:
     print("Ocurrio un error al consultar: ",e)

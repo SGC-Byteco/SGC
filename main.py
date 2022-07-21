@@ -54,6 +54,11 @@ class MainWindow(QMainWindow):
         self.ui.load_pages.datosEmpresa_tipo_escaner.setCurrentIndex(-1)
         self.ui.load_pages.configuracion_secciones_2.setPlaceholderText(defecto_secciones)
         self.ui.load_pages.configuracion_secciones_2.setCurrentIndex(-1)
+        self.ui.load_pages.configuracion_linea_factura_impuesto_bolsa.setPlaceholderText(defecto_impuesto_bolsa)
+        self.ui.load_pages.configuracion_linea_factura_impuesto_bolsa.setCurrentIndex(-1)
+        self.ui.load_pages.configuracion_linea_factura_Impuesto_excluido.setPlaceholderText(defecto_impuesto_excluido)
+        self.ui.load_pages.configuracion_linea_factura_Impuesto_excluido.setCurrentIndex(-1)
+        
         
     def change_value(self, value):
         self.progress.set_value(value)
@@ -232,13 +237,18 @@ class MainWindow(QMainWindow):
         self.datosEmpresa_ruta_precio_epelsa=self.ui.load_pages.configuracion_linea_epelsa_4.text()
         
         # Bascula Ishida
-        self.datosEmpresa_ruta_ishida=self.ui.load_pages.configuracion_linea_ishida_3
-        self.datosEmpresa_ruta_productos_ishida=self.ui.load_pages.configuracion_linea_ishida_4
+        self.datosEmpresa_ruta_ishida=self.ui.load_pages.configuracion_linea_ishida_3.text()
+        self.datosEmpresa_ruta_productos_ishida=self.ui.load_pages.configuracion_linea_ishida_4.text()
         
         # Bascula Marquez 
+        self.datosEmpresa_ip_marques=self.ui.load_pages.configuracion_linea_marques_2.text()
         
-        self.datosEmpresa_ip_marques=self.ui.load_pages.confiuracion_linea_marques
-        
+        # Facturacion
+        self.datosEmpresa_token_factura=self.ui.load_pages.configuracion_linea_factura_token.text()
+        self.datosEmpresa_Dian=self.ui.load_pages.configuracion_linea_factura_Dian.text()
+        self.datosEmpresa_impuesto_bolsa=self.ui.load_pages.configuracion_linea_factura_impuesto_bolsa.currentText()
+        self.datosEmpresa_impuesto_excluido=self.ui.load_pages.configuracion_linea_factura_Impuesto_excluido.currentText()
+        self.datosEmpresa_email=self.ui.load_pages.configuracion_linea_factura_email.text()
         
         # Condicion del place holder text
         if (self.ui.load_pages.datosEmpresa_departamento.currentIndex() == -1 or 
@@ -254,7 +264,8 @@ class MainWindow(QMainWindow):
                self.datosEmpresa_licencia,self.datosEmpresa_impresora_pos,self.datosEmpresa_ruta_dibal,
                self.datosEmpresa_secciones_dibal,self.datosEmpresa_archivo_dibal,self.datosEmpresa_ruta_epelsa,
                self.datosEmpresa_ruta_precio_epelsa,self.datosEmpresa_ruta_ishida,self.datosEmpresa_ruta_productos_ishida,
-               self.datosEmpresa_ip_marques)
+               self.datosEmpresa_ip_marques,self.datosEmpresa_token_factura,self.datosEmpresa_Dian,self.datosEmpresa_impuesto_bolsa,
+               self.datosEmpresa_impuesto_excluido,self.datosEmpresa_email)
 
 
        
