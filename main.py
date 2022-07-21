@@ -44,6 +44,16 @@ class MainWindow(QMainWindow):
         self.ui.load_pages.datosEmpresa_departamento.setCurrentIndex(-1)
         self.ui.load_pages.datosEmpresa_municipio.setPlaceholderText(defecto_municipio)
         self.ui.load_pages.datosEmpresa_municipio.setCurrentIndex(-1)
+        self.ui.load_pages.datosEmpresa_tercero.setPlaceholderText(defecto_tercero)
+        self.ui.load_pages.datosEmpresa_tercero.setCurrentIndex(-1)
+        self.ui.load_pages.datosEmpresa_sucursal.setPlaceholderText(defecto_sucursal)
+        self.ui.load_pages.datosEmpresa_sucursal.setCurrentIndex(-1)
+        self.ui.load_pages.datosEmpresa_lista_precios.setPlaceholderText(defecto_lista_de_precios)
+        self.ui.load_pages.datosEmpresa_lista_precios.setCurrentIndex(-1)
+        self.ui.load_pages.datosEmpresa_tipo_escaner.setPlaceholderText(defecto_tipo_de_escaner)
+        self.ui.load_pages.datosEmpresa_tipo_escaner.setCurrentIndex(-1)
+        self.ui.load_pages.configuracion_secciones_2.setPlaceholderText(defecto_secciones)
+        self.ui.load_pages.configuracion_secciones_2.setCurrentIndex(-1)
         
     def change_value(self, value):
         self.progress.set_value(value)
@@ -185,6 +195,7 @@ class MainWindow(QMainWindow):
     # Boton de guardar edicion
     def boton_guardar_edicion(self):
         print("Validacion de datos")
+        self.estado=True
         
         # Datos Nombre
         self.datosEmpresa_nombre= self.ui.load_pages.datosEmpresa_nombre.text()
@@ -198,15 +209,52 @@ class MainWindow(QMainWindow):
         
         # Datos departamentos y municipios
         self.datosEmpresa_departamento= self.ui.load_pages.datosEmpresa_departamento.currentText()
-        self.datosEmpresa_departamento_1= self.ui.load_pages.datosEmpresa_departamento.currentIndex()
-        self.datosEmpresa_departamento_2=self.ui.load_pages.datosEmpresa_departamento.itemText(self.datosEmpresa_departamento_1)
         self.datosEmpresa_municipio= self.ui.load_pages.datosEmpresa_municipio.currentText()
-                
-        print("Departamento",self.datosEmpresa_departamento +" "+"Municipio",self.datosEmpresa_municipio)
         
-        boton_guardar(True, self.datosEmpresa_nombre,self.datosEmpresa_razon_social,self.datosEmpresa_direccion,
+        # Datos Terceros, Sucursal, Lista precio, Tipo escaner,licencia
+        self.datosEmpresa_tercero=self.ui.load_pages.datosEmpresa_tercero.currentText()
+        self.datosEmpresa_sucursal=self.ui.load_pages.datosEmpresa_sucursal.currentText()
+        self.datosEmpresa_lista_precios=self.ui.load_pages.datosEmpresa_lista_precios.currentText()
+        self.datosEmpresa_escaner=self.ui.load_pages.datosEmpresa_tipo_escaner.currentText()
+        self.datosEmpresa_licencia=self.ui.load_pages.datosEmpresa_licencia.text()
+        
+        # Impresora POS
+        self.datosEmpresa_impresora_pos=self.ui.load_pages.config_linea_pos_2.text()
+        
+        # Basculas
+        # Bascula Dibal
+        self.datosEmpresa_ruta_dibal=self.ui.load_pages.configuracion_linea_dibal_3.text()
+        self.datosEmpresa_secciones_dibal=self.ui.load_pages.configuracion_secciones_2.currentText()
+        self.datosEmpresa_archivo_dibal=self.ui.load_pages.configuracion_linea_dibal_4.text()
+        
+        # Bascula Epelsa
+        self.datosEmpresa_ruta_epelsa=self.ui.load_pages.configuracion_linea_epelsa_3.text()
+        self.datosEmpresa_ruta_precio_epelsa=self.ui.load_pages.configuracion_linea_epelsa_4.text()
+        
+        # Bascula Ishida
+        self.datosEmpresa_ruta_ishida=self.ui.load_pages.configuracion_linea_ishida_3
+        self.datosEmpresa_ruta_productos_ishida=self.ui.load_pages.configuracion_linea_ishida_4
+        
+        # Bascula Marquez 
+        
+        self.datosEmpresa_ip_marques=self.ui.load_pages.confiuracion_linea_marques
+        
+        
+        # Condicion del place holder text
+        if (self.ui.load_pages.datosEmpresa_departamento.currentIndex() == -1 or 
+        self.ui.load_pages.datosEmpresa_municipio.currentIndex() ==-1 or 
+        self.ui.load_pages.datosEmpresa_tercero.currentIndex() ==-1 ):
+            self.estado=False
+            print("Te cache")
+            
+        boton_guardar(self.estado, self.datosEmpresa_nombre,self.datosEmpresa_razon_social,self.datosEmpresa_direccion,
                self.datosEmpresa_telefono,self.datosEmpresa_tipo_regimen,self.datosEmpresa_nit,
-               self.datosEmpresa_departamento, self.datosEmpresa_municipio)
+               self.datosEmpresa_departamento, self.datosEmpresa_municipio,self.datosEmpresa_tercero,
+               self.datosEmpresa_sucursal,self.datosEmpresa_lista_precios,self.datosEmpresa_escaner,
+               self.datosEmpresa_licencia,self.datosEmpresa_impresora_pos,self.datosEmpresa_ruta_dibal,
+               self.datosEmpresa_secciones_dibal,self.datosEmpresa_archivo_dibal,self.datosEmpresa_ruta_epelsa,
+               self.datosEmpresa_ruta_precio_epelsa,self.datosEmpresa_ruta_ishida,self.datosEmpresa_ruta_productos_ishida,
+               self.datosEmpresa_ip_marques)
 
 
        

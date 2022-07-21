@@ -79,42 +79,75 @@ try:
         #Cantidad de caracteres por defecto =48
     
         # Ensayo de editar 
-        def boton_guardar(valor,nombre,razon_social,direccion,
-                   telefono,tipo_regimen,nit,departamento,municipio):
-            if valor==True:
+        def boton_guardar(estado,nombre,razon_social,direccion,
+                   telefono,tipo_regimen,nit,departamento,municipio,
+                   tercero,sucursal,lista_precios,tipo_escaner,licencia,
+                   impresora_pos,ruta_dibal,secciones,archivo_dibal,ruta_epelsa,
+                   ruta_precio_epelsa,ruta_ishida,ruta_productos_ishida,ruta_ip_marques):
+            if estado==True:
                 # Carga de archivo txt por defecto
-                new=np.array(departamento)
-                new2=np.array(municipio)
+                defecto_departamento=np.array(departamento)
+                defecto_municipio=np.array(municipio)
+                defecto_tercero=np.array(tercero)
+                defecto_sucursal=np.array(sucursal)
+                defecto_lista_de_precios=np.array(lista_precios)
+                defecto_tipo_de_escaner=np.array(tipo_escaner)
+                defecto_secciones=np.array(secciones)
+                
                 archivo=open("base_de_datos/defecto_empresa.txt","w")
-                contenido=str(new)
-                contenido2=str(new2)
-                archivo.write(contenido + '\n' )
-                archivo.write(contenido2)
+                defec_departamento=str(defecto_departamento)
+                defec_municipio=str(defecto_municipio)
+                defec_tercero=str(defecto_tercero)
+                defec_sucursal=str(defecto_sucursal)
+                defec_lista_de_precios=str(defecto_lista_de_precios)
+                defec_tipo_de_escaner=str(defecto_tipo_de_escaner)
+                defec_secciones=str(defecto_secciones)
+                
+                archivo.write(defec_departamento)
+                archivo.write('\n')
+                archivo.write(defec_municipio)
+                archivo.write('\n')
+                archivo.write(defec_tercero)
+                archivo.write('\n')
+                archivo.write(defec_sucursal)
+                archivo.write('\n')
+                archivo.write(defec_lista_de_precios)
+                archivo.write('\n')
+                archivo.write(defec_tipo_de_escaner)
+                archivo.write('\n')
+                archivo.write(defec_secciones)
                 archivo.close()
-                
-                
                 
                 #Carga de valores de campos de texto en la base da datos 
                 try:
                     with conexion.cursor() as cursor:
                         # Datos Principales
                         consulta_empresa_1= "update dbo.gen_empresa set nombre=?,razon_social=?,direccion=?,"
-                        consulta_empresa_2="telefono=?,tipo_regimen=?,nit=? WHERE id = ?;"
-                        consulta_empresa=consulta_empresa_1+consulta_empresa_2
+                        consulta_empresa_2="telefono=?,tipo_regimen=?,nit=?,licencia=?,cantidad_caracteres=?,"
+                        consulta_empresa_3="ruta_archivo_tiquetes_dibal=?,ruta_archivo_tx_dival=?,ruta_archivo_tiquetes_epelsa=?,"
+                        consulta_empresa_4="ruta_archivo_precios_epelsa=?,ruta_archivo_txt_ishida=?,ruta_archivo_tiquetes_ishida=?,ruta_ip_marques WHERE id = ?;"
+                        consulta_empresa=consulta_empresa_1+consulta_empresa_2+consulta_empresa_3+consulta_empresa_4
                         id = 1
-                        cursor.execute(consulta_empresa,(nombre, razon_social,direccion,telefono,tipo_regimen,nit, id))                        
+                        cursor.execute(consulta_empresa,(nombre,razon_social,direccion,telefono,tipo_regimen,nit,licencia, 
+                                                         impresora_pos,ruta_dibal,archivo_dibal,ruta_epelsa,ruta_precio_epelsa,
+                                                         ruta_ishida,ruta_productos_ishida,ruta_ip_marques,id))                        
                         conexion.commit()
                         print("Datos Cambiados Correctamente")
                 except Exception as e:
                     print("Ocurrió un error al editar: ", e)  
             else:
                 print("Los datos no fueron actualizados")
+            
         with open("base_de_datos/defecto_empresa.txt") as archivo_defecto:
             lineas= archivo_defecto.readlines()
             lineas= list(map(lambda l: l.rstrip('\n'),lineas))
             defecto_departamento=lineas[0]
             defecto_municipio=lineas[1]
-                 
+            defecto_tercero=lineas[2]
+            defecto_sucursal=lineas[3]
+            defecto_lista_de_precios=lineas[4]
+            defecto_tipo_de_escaner=lineas[5]
+            defecto_secciones=lineas[6]
 
 except Exception as e:
     print("Ocurrio un error al consultar: ",e)
