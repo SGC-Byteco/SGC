@@ -244,10 +244,9 @@ class MainWindow(QMainWindow):
         
         # Condicion del place holder text
         if (self.ui.load_pages.datosEmpresa_departamento.currentIndex() == -1 or 
-        self.ui.load_pages.datosEmpresa_municipio.currentIndex() ==-1 or 
-        self.ui.load_pages.datosEmpresa_tercero.currentIndex() ==-1 ):
+        self.ui.load_pages.datosEmpresa_municipio.currentIndex() ==-1):
             self.estado=False
-            print("Te cache")
+            print("No se pueden actualizar los datos")
             
         boton_guardar(self.estado, self.datosEmpresa_nombre,self.datosEmpresa_razon_social,self.datosEmpresa_direccion,
                self.datosEmpresa_telefono,self.datosEmpresa_tipo_regimen,self.datosEmpresa_nit,
